@@ -21,5 +21,14 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "AI|Perception")
 		static bool SetSightRange(AAIController* Controller, float SightRange);
+
+	UFUNCTION(BlueprintCallable, Category = "AI|Perception")
+		static bool SetHearingRange(AAIController* Controller, float HearingRange);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "AI|Perception")
+		static float GetSightRange(AAIController* Controller);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "AI|Perception")
+		static float GetHearingRange(AAIController* Controller);
 	
 };
