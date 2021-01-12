@@ -42,6 +42,16 @@
 			"Name": "VictoryBPLibrary",
 			"Enabled": true,
 			"MarketplaceURL": "http://www.ue4code.com"
+		},
+		{
+			"Name": "AutoSettings",
+			"Enabled": false,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/7f6a777da2724d4a9a3dd551f03a3ad1"
+		},
+		{
+			"Name": "RamaSaveSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/6c81d0b2b68f445cb24616fa39a462c2"
 		}
 	]
 }
