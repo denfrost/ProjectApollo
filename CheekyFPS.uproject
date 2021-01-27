@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.25",
+	"EngineAssociation": "4.26",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -201,6 +201,15 @@
 		{
 			"Name": "AndroidPermission",
 			"Enabled": false
+		},
+		{
+			"Name": "AsyncLoadingScreen",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/01f39767dc6b4290877f38365787cbf8"
+		},
+		{
+			"Name": "GPULightmass",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
