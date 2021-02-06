@@ -2,32 +2,25 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "CheekyFPS/System/PlayerInputSettings.h"
-#include "ApolloUserSettingsLibrary.generated.h"
+#include "CheekyFPS/System/ApolloPlayerSettings.h"
+#include "ApolloPlayerSettingsLibrary.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class CHEEKYFPS_API UApolloUserSettingsLibrary : public UBlueprintFunctionLibrary
+class CHEEKYFPS_API UApolloPlayerSettingsLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 public:
-		/*const UPlayerInputSettings* InputSettings = GetDefault<UPlayerInputSettings>();
-		UPlayerInputSettings* InputSettings_Setter = GetMutableDefault<UPlayerInputSettings>();*/
-
-	//GETTERS
-
-
-	//Get the status of the player's Gamepad Type setting
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "User Settings")
+		//Get the status of the player's Gamepad Type setting
+		UFUNCTION(BlueprintCallable, BlueprintPure, Category = "User Settings")
 		static EGamepadType GetPlayerGamepadType();
 
 	//Get the status of the player's Crouch toggle setting
-	UFUNCTION(BlueprintCallable,BlueprintPure, Category = "User Settings")
-	static bool GetCrouchToggleSetting();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "User Settings")
+		static bool GetCrouchToggleSetting();
 
 	//Get the status of the player's Sprint toggle setting
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "User Settings")
@@ -87,14 +80,14 @@ public:
 
 
 	UFUNCTION(BlueprintCallable, Category = "User Settings")
-	static void ResetToDefaults();
+		static void ResetToDefaults();
 
 
 	//SETTERS
 
 	//Set the status of the player's Gamepad Type setting
 	UFUNCTION(BlueprintCallable, Category = "User Settings")
-	static void SetPlayerGamepadType(EGamepadType NewGamepadType);
+		static void SetPlayerGamepadType(EGamepadType NewGamepadType);
 
 	//Set the status of the player's Crouch toggle setting
 	UFUNCTION(BlueprintCallable, Category = "User Settings")

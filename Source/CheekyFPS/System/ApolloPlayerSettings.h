@@ -4,24 +4,22 @@
 
 #include "CheekyFPS/CheekyFPS.h"
 #include "Engine/DeveloperSettings.h"
-#include "PlayerInputSettings.generated.h"
+#include "ApolloPlayerSettings.generated.h"
 
 /**
- *
+ * 
  */
 UCLASS(config = "PlayerSettings", defaultconfig, meta = (DisplayName = "Player Settings"))
-class CHEEKYFPS_API UPlayerInputSettings : public UDeveloperSettings
+class CHEEKYFPS_API UApolloPlayerSettings : public UDeveloperSettings
 {
 	GENERATED_BODY()
 
-		
 public:
 
 	//This will reinitalize user settings to the default values
 	UFUNCTION(BlueprintCallable, Category = "General Settings")
-	void ResetToDefaultSettings();
+		void ResetToDefaultSettings();
 
-	UPlayerInputSettings(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
 
 	/*Should the player hold down the Crouch key/button or press it?*/
 	UPROPERTY(Config, EditAnywhere, Category = "General Settings")
@@ -66,15 +64,15 @@ public:
 
 	//How sensitive should the input react to the mouse's horizontal movement
 	UPROPERTY(Config, EditAnywhere, Category = "Mouse Settings")
-	float MouseSensitivityX = 1.0f;
+		float MouseSensitivityX = 1.0f;
 
 	//How sensitive should the input react to the mouse's vertical movement
 	UPROPERTY(Config, EditAnywhere, Category = "Mouse Settings")
 		float MouseSensitivityY = 1.0f;
-	
+
 	//How sensitive should the input react to the gamepad's horizontal movement
 	UPROPERTY(Config, EditAnywhere, Category = "Gamepad Settings")
-	float GamepadSensitivityX = 1.0f;
+		float GamepadSensitivityX = 1.0f;
 
 	//How sensitive should the input react to the gamepad's vertical movement
 	UPROPERTY(Config, EditAnywhere, Category = "Gamepad Settings")
@@ -86,5 +84,5 @@ public:
 
 	UPROPERTY(Config, EditAnywhere, Category = "Gamepad Settings")
 		float GamepadLookSmoothingRate = 0.65f;
-
+	
 };

@@ -1,11 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "CheekyFPS/System/PlayerInputSettings.h"
+#include "CheekyFPS/System/ApolloPlayerSettings.h"
 
-
-
-void UPlayerInputSettings::ResetToDefaultSettings()
+void UApolloPlayerSettings::ResetToDefaultSettings()
 {
 	bCrouchToggle = false;
 	bSprintToggle = false;
@@ -23,9 +21,4 @@ void UPlayerInputSettings::ResetToDefaultSettings()
 	MouseLookSmoothingRate = 0.60f;
 	GamepadLookSmoothingRate = 0.65f;
 	CurrentGamepadType = EGamepadType::Xbox;
-}
-
-UPlayerInputSettings::UPlayerInputSettings(const FObjectInitializer& ObjectInitializer /*= FObjectInitializer::Get()*/)
-{
-
 }
