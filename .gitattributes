@@ -1,0 +1,14 @@
+Content/Static/** filter=lfs diff=lfs merge=lfs -text
+Content/firstperson/** filter=lfs diff=lfs merge=lfs -text
+Content/CheekyFPS/Levels/** filter=lfs diff=lfs merge=lfs -text
+Content/Movies/** filter=lfs diff=lfs merge=lfs -text
+Content/CheekyFPS/External/** filter=lfs diff=lfs merge=lfs -text
+Content/CheekyFPS/Chameleon/** filter=lfs diff=lfs merge=lfs -text
+Content/CheekyFPS/ChameleonDemo/** filter=lfs diff=lfs merge=lfs -text
+Content/StarterContent/** filter=lfs diff=lfs merge=lfs -text
+Content/ChameleonDemo/** filter=lfs diff=lfs merge=lfs -text
+*.umap filter=lfs diff=lfs merge=lfs -text
+Content/Chameleon/** filter=lfs diff=lfs merge=lfs -text
+Content/ScienceLab/** filter=lfs diff=lfs merge=lfs -text
+Content/Polar/** filter=lfs diff=lfs merge=lfs -text
+Content/MS_SnowEss/** filter=lfs diff=lfs merge=lfs -text
