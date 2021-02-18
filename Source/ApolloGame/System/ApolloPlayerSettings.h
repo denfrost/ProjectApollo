@@ -93,7 +93,7 @@ public:
 
 	/*Should the player hold down the Crouch key/button or press it?*/
 	UPROPERTY(Config, EditAnywhere, Category = "General Settings")
-		bool bCrouchToggle = false;
+		bool bCrouchToggle = true;
 
 	/*Should the player hold down the Sprint key/button or press it?*/
 	UPROPERTY(Config, EditAnywhere, Category = "General Settings")
