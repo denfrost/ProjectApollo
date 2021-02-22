@@ -150,3 +150,28 @@ void UApolloPlayerSettings::SetGamepadTypeSetting(EGamepadType NewGamepadType)
 	CurrentGamepadType = NewGamepadType;
 	SaveConfig();
 }
+
+void UApolloPlayerSettings::SetRTGISetting(bool bEnableSetting)
+{
+	bEnableRTGI = bEnableSetting;
+}
+
+void UApolloPlayerSettings::SetRTShadows(bool bEnableSetting)
+{
+	bEnableRTShadows = bEnableSetting;
+}
+
+void UApolloPlayerSettings::SetRTAOSetting(bool bEnableSetting)
+{
+	bEnableRTAO = bEnableSetting;
+}
+
+void UApolloPlayerSettings::SetRTReflectionsSetting(bool bEnableSetting)
+{
+	bEnableRTReflections = bEnableSetting;
+}
+
+void UApolloPlayerSettings::SetRTTranslucencySetting(bool bEnableSetting)
+{
+	bEnableRTTranslucency = bEnableSetting;
+}

@@ -99,6 +99,27 @@ public:
 
 	//SETTERS
 
+	//This will update the Raytraced Global Illumination setting
+	UFUNCTION(BlueprintCallable, Category = "Graphics Settings")
+		static void SetRTGlobalIlluminationSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Shadows setting
+	UFUNCTION(BlueprintCallable, Category = "Graphics Settings")
+		static void SetRTShadowsSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Ambient Occlusion setting
+	UFUNCTION(BlueprintCallable, Category = "Graphics Settings")
+		static void SetRTAmbientOcclusionSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Reflections setting
+	UFUNCTION(BlueprintCallable, Category = "Graphics Settings")
+		static void SetRTReflectionsSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Translucency setting
+	UFUNCTION(BlueprintCallable, Category = "Graphics Settings")
+		static void SetRTTranslucencySetting(bool bEnableSetting);
+
+
 	//Set the status of the player's Gamepad Type setting
 	UFUNCTION(BlueprintCallable, Category = "User Settings")
 		static void SetPlayerGamepadType(EGamepadType NewGamepadType);

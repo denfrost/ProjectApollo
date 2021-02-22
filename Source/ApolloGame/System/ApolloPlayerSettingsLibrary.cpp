@@ -137,6 +137,36 @@ FName UApolloPlayerSettingsLibrary::GetKeyName(FKey KeyPressed)
 	return KeyPressed.GetFName();
 }
 
+void UApolloPlayerSettingsLibrary::SetRTGlobalIlluminationSetting(bool bEnableSetting)
+{
+	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();
+	InputSettings->SetRTGISetting(bEnableSetting);
+}
+
+void UApolloPlayerSettingsLibrary::SetRTShadowsSetting(bool bEnableSetting)
+{
+	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();
+	InputSettings->SetRTShadows(bEnableSetting);
+}
+
+void UApolloPlayerSettingsLibrary::SetRTAmbientOcclusionSetting(bool bEnableSetting)
+{
+	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();
+	InputSettings->SetRTAOSetting(bEnableSetting);
+}
+
+void UApolloPlayerSettingsLibrary::SetRTReflectionsSetting(bool bEnableSetting)
+{
+	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();
+	InputSettings->SetRTReflectionsSetting(bEnableSetting);
+}
+
+void UApolloPlayerSettingsLibrary::SetRTTranslucencySetting(bool bEnableSetting)
+{
+	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();
+	InputSettings->SetRTTranslucencySetting(bEnableSetting);
+}
+
 void UApolloPlayerSettingsLibrary::SetPlayerGamepadType(EGamepadType NewGamepadType)
 {
 	UApolloPlayerSettings* InputSettings = GetMutableDefault<UApolloPlayerSettings>();

@@ -91,6 +91,26 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Gamepad Settings")
 		void SetGamepadTypeSetting(EGamepadType NewGamepadType);
 
+	//This will update the Raytraced Global Illumination setting
+	UFUNCTION(Category = "Graphics Settings|Raytracing")
+		void SetRTGISetting(bool bEnableSetting);
+
+	//This will update the Raytraced Shadows setting
+	UFUNCTION( Category = "Graphics Settings|Raytracing")
+		void SetRTShadows(bool bEnableSetting);
+
+	//This will update the Raytraced Ambient Occlusion setting
+	UFUNCTION(Category = "Graphics Settings|Raytracing")
+		void SetRTAOSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Reflections setting
+	UFUNCTION(Category = "Graphics Settings|Raytracing")
+		void SetRTReflectionsSetting(bool bEnableSetting);
+
+	//This will update the Raytraced Translucency setting
+	UFUNCTION(Category = "Graphics Settings|Raytracing")
+		void SetRTTranslucencySetting(bool bEnableSetting);
+
 	/*Should the player hold down the Crouch key/button or press it?*/
 	UPROPERTY(Config, EditAnywhere, Category = "General Settings")
 		bool bCrouchToggle = true;
@@ -109,7 +129,28 @@ public:
 
 	/*Should the player hold down the Prone key/button or press it?*/
 	UPROPERTY(Config, EditAnywhere, Category = "General Settings")
-		bool bProneToggle = true;
+		bool bProneToggle = false;
+
+	/*Enable RT based Global Illumination */
+	UPROPERTY(Config, EditAnywhere, Category = "Graphics Settings|Raytracing")
+		bool bEnableRTGI = true;
+
+	/*Enable RT based Shadows */
+	UPROPERTY(Config, EditAnywhere, Category = "Graphics Settings|Raytracing")
+		bool bEnableRTShadows = true;
+
+	/*Enable RT based Ambient Occlusion */
+	UPROPERTY(Config, EditAnywhere, Category = "Graphics Settings|Raytracing")
+		bool bEnableRTAO = false;
+
+	/*Enable RT based Reflections */
+	UPROPERTY(Config, EditAnywhere, Category = "Graphics Settings|Raytracing")
+		bool bEnableRTReflections = false;
+
+	/*Enable RT based Translucency */
+	UPROPERTY(Config, EditAnywhere, Category = "Graphics Settings|Raytracing")
+		bool bEnableRTTranslucency = false;
+
 
 	//What gamepad is the player currently using?
 	//This will show the correct UI icons for the player's gamepad of choice
