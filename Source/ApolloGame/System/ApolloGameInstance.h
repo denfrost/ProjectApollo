@@ -4,7 +4,29 @@
 
 #include "Engine/GameInstance.h"
 #include "ApolloGame/ApolloGame.h"
+#include "Engine/DataTable.h"
 #include "ApolloGameInstance.generated.h"
+
+class AApolloCharacter;
+
+/*Structure that defines a weapon look up table for the console*/
+USTRUCT(BlueprintType)
+struct FWeaponSpawnData : public FTableRowBase
+{
+	GENERATED_BODY()
+public:
+
+	FWeaponSpawnData()
+		: WeaponName(""),
+		WeaponClass(nullptr)
+	{}
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
+		FString WeaponName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
+		TSoftClassPtr<AActor> WeaponClass;
+};
 
 /**
  *
@@ -18,7 +40,9 @@ class APOLLOGAME_API UApolloGameInstance : public UGameInstance
 	void Init() override;
 public:
 
-	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite,Category = "Console")
+	UDataTable* WeaponLookupTable;
+
 
 	bool bHasPlayerSettingsLoaded;
 	float testMouseSensX;
@@ -111,9 +135,24 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Game|Difficulty")
 	EGameDifficultySetting GetGameDifficulty();
 
+	TSoftClassPtr<AActor> WeaponToSpawn;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Console")
+	TMap<FString,TSoftClassPtr<AActor>> Weapons;
+
+	UFUNCTION(Exec)
+		void SpawnWeapon(FString WeaponName);
+
+	UFUNCTION(Exec)
+		void HealPlayer(float HealAmount);
+
+	UFUNCTION(Exec)
+		void RecoverMagic(float RecoverAmount);
 protected:
+
+	AApolloCharacter* Player;
 	
 	void InitializeManualSaveArray();
+	void InitWeaponArray();
 
 	void InitializeAutoSaveArray();
 

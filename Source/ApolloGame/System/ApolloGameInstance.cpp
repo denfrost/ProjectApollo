@@ -2,9 +2,11 @@
 
 
 #include "ApolloGameInstance.h"
+#include "ApolloGame/Character/ApolloCharacter.h"
 
 UApolloGameInstance::UApolloGameInstance()
 {
+	//On construction initialize save name arrays and find player settings
 	bHasPlayerSettingsLoaded = FConfigCacheIni::LoadGlobalIniFile(PlayerSettingsIni, TEXT("PlayerSettings"), NULL, false, false, true, *(FPaths::GeneratedConfigDir()));
 	InitializeManualSaveArray();
 	InitializeAutoSaveArray();
@@ -12,13 +14,14 @@ UApolloGameInstance::UApolloGameInstance()
 
 void UApolloGameInstance::Init()
 {
+	//Set save slot in case it is null and load config settings
 	Super::Init();
 	if (GetCurrentSaveSlot() == "")
 	{
 		SetCurrentSaveSlot("SaveSlotA");
 	}
 	LoadConfig();
-
+	Player = Cast<AApolloCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 
 }
 
@@ -122,6 +125,39 @@ EGameDifficultySetting UApolloGameInstance::GetGameDifficulty()
 	return CurrentGameDifficulty;
 }
 
+
+void UApolloGameInstance::SpawnWeapon(FString WeaponName)
+{
+	
+	TSubclassOf<AActor> NewWeapon;
+	if (Weapons.Find(WeaponName))
+	{
+		NewWeapon = Weapons.Find(WeaponName)->Get();
+	}
+
+	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+	{
+		IConsoleCommandInterface::Execute_SpawnNewWeapon(Player, NewWeapon);
+	}
+
+}
+
+void UApolloGameInstance::HealPlayer(float HealAmount)
+{
+	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+	{
+		IConsoleCommandInterface::Execute_HealPlayer(Player, HealAmount);
+	}
+}
+
+void UApolloGameInstance::RecoverMagic(float RecoverAmount)
+{
+	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+	{
+		IConsoleCommandInterface::Execute_RecoverApollo(Player, RecoverAmount);
+	}
+}
+
 void UApolloGameInstance::InitializeManualSaveArray()
 {
 	ManualSaveSlotsList.Add("SaveSlotA");
@@ -132,6 +168,23 @@ void UApolloGameInstance::InitializeManualSaveArray()
 	ManualSaveSlotsList.Add("SaveSlotF");
 	ManualSaveSlotsList.Add("SaveSlotG");
 
+
+}
+
+void UApolloGameInstance::InitWeaponArray()
+{
+	//Attempt to add Weapon references through iterating the datatable containing them
+	//TArray<FName> RowNames;
+	//FString ContextString;
+	//RowNames = WeaponLookupTable->GetRowNames();
+	//for (auto& name : RowNames)
+	//{
+	//	FWeaponSpawnData* row = WeaponLookupTable->FindRow<FWeaponSpawnData>(name, ContextString);
+	//	if (row)
+	//	{
+	//		Weapons.Add(row->WeaponClass);
+	//	}
+	//}
 }
 
 void UApolloGameInstance::InitializeAutoSaveArray()
