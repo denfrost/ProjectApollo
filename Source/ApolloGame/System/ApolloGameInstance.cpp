@@ -128,17 +128,21 @@ EGameDifficultySetting UApolloGameInstance::GetGameDifficulty()
 
 void UApolloGameInstance::SpawnWeapon(FString WeaponName)
 {
-	
+	Player = Cast<AApolloCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	TSubclassOf<AActor> NewWeapon;
-	if (Weapons.Find(WeaponName))
+	if (Player)
 	{
-		NewWeapon = Weapons.Find(WeaponName)->Get();
-	}
+		if (Weapons.Find(WeaponName))
+		{
+			NewWeapon = Weapons.Find(WeaponName)->Get();
+		}
 
-	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
-	{
-		IConsoleCommandInterface::Execute_SpawnNewWeapon(Player, NewWeapon);
+		if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+		{
+			IConsoleCommandInterface::Execute_SpawnNewWeapon(Player, NewWeapon);
+		}
 	}
+	
 
 }
 
