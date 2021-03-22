@@ -93,11 +93,37 @@ public:
 		return MapFiles;
 	}
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = "GetAllMapNames_Category", Keywords = "GAMNMaps"), Category = "MapNames")
-	static TArray<FString> GetAllMapNames_Test(FString levelsFolder)
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "GetAllMapNames_ByFolder", Keywords = "GAMNMapsFolder"), Category = "MapNames")
+	static TArray<FString> GetAllMapNames_ByFolder(FString levelsFolder)
 	{
 		TArray<FString> MapPaths;
 		IFileManager::Get().FindFilesRecursive(MapPaths, *FPaths::ProjectContentDir(), TEXT("*.umap"), true, false, false);
+
+		TArray<FString> MapNames = TArray<FString>();
+
+		for (FString mapPath : MapPaths)
+		{
+			//remove the path
+			FString mapFile;
+			FString discard;
+			mapPath.Split(levelsFolder, &discard, &mapFile);
+
+			//remove the extension
+			FString mapName;
+			if (mapFile.Split(".", &mapName, &discard))
+			{
+				//add map name to our array
+				MapNames.Add(mapName);
+			}
+		}
+		return MapNames;
+	}
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "GetAllMapNames_ByDLCFolder", Keywords = "DLCGAMN"), Category = "MapNames")
+		static TArray<FString> GetAllDLCMapNames_ByFolder(FString levelsFolder)
+	{
+		TArray<FString> MapPaths;
+		IFileManager::Get().FindFilesRecursive(MapPaths, *FPaths::ProjectPluginsDir(), TEXT("*.umap"), true, false, false);
 
 		TArray<FString> MapNames = TArray<FString>();
 
