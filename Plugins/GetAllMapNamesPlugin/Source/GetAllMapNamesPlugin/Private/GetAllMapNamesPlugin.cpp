@@ -1,7 +1,7 @@
 // Copyright 1998-2018 Epic Games, Inc. All Rights Reserved.
 
 #include "GetAllMapNamesPlugin.h"
-#include "ISettingsModule.h"
+#include "Settings/Public/ISettingsModule.h"
 #include "GetAllMapNamesSettings.h"
 
 #define LOCTEXT_NAMESPACE "FGetAllMapNamesPluginModule"
