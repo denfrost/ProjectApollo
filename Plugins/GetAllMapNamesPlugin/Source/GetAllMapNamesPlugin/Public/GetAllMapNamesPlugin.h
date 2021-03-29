@@ -17,6 +17,6 @@ public:
 
 private:
 
-	// Registers the plugin's settings as project settings.
-	void RegisterSettings();
+	//// Registers the plugin's settings as project settings.
+	//void RegisterSettings();
 };

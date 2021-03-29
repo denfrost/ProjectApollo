@@ -8,8 +8,9 @@
 
 void FGetAllMapNamesPluginModule::StartupModule()
 {
+	//Super::StartupModule();
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
-	RegisterSettings();
+	//RegisterSettings();
 }
 
 void FGetAllMapNamesPluginModule::ShutdownModule()
@@ -19,14 +20,14 @@ void FGetAllMapNamesPluginModule::ShutdownModule()
 
 }
 
-void FGetAllMapNamesPluginModule::RegisterSettings()
-{
-	if (ISettingsModule* SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
-	{
-		SettingsModule->RegisterSettings("Project", "Plugins", "Journey Finder", LOCTEXT("RuntimeSettingsName", "Journey Finder"), LOCTEXT("RuntimeSettingsDescription", "Configure the Journey Finder settings"), GetMutableDefault<UGetAllMapNamesSettings>());
-
-	}
-}
+//void FGetAllMapNamesPluginModule::RegisterSettings()
+//{
+//	if (ISettingsModule* SettingsModule = FModuleManager::GetModulePtr<ISettingsModule>("Settings"))
+//	{
+//		SettingsModule->RegisterSettings("Project", "Plugins", "Journey Finder", LOCTEXT("RuntimeSettingsName", "Journey Finder"), LOCTEXT("RuntimeSettingsDescription", "Configure the Journey Finder settings"), GetMutableDefault<UGetAllMapNamesSettings>());
+//
+//	}
+//}
 
 #undef LOCTEXT_NAMESPACE
 
