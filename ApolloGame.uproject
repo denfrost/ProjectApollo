@@ -166,7 +166,7 @@
 		},
 		{
 			"Name": "MobilePatchingUtils",
-			"Enabled": false
+			"Enabled": false 
 		},
 		{
 			"Name": "ImgMedia",
@@ -174,7 +174,7 @@
 		},
 		{
 			"Name": "WinDualShock",
-			"Enabled": true,
+			"Enabled": false,
 			"SupportedTargetPlatforms": [
 				"Win64"
 			]
