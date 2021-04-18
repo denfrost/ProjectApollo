@@ -28,6 +28,9 @@ public:
 	TSubclassOf<ABlockoutToolsParent> Blockout_Corner_Curved = LoadClass<ABlockoutToolsParent>(nullptr, TEXT("Blueprint'/BlockoutToolsPlugin/Blueprints/Blockout_Corner_Curved.Blockout_Corner_Curved_C'"));
 
 	UPROPERTY(EditDefaultsOnly, BlueprintreadWrite)
+	TSubclassOf<ABlockoutToolsParent> Blockout_Corner_Ramp = LoadClass<ABlockoutToolsParent>(nullptr, TEXT("Blueprint'/BlockoutToolsPlugin/Blueprints/Blockout_Corner_Ramp.Blockout_Corner_Ramp_C'"));
+
+	UPROPERTY(EditDefaultsOnly, BlueprintreadWrite)
 	TSubclassOf<ABlockoutToolsParent> Blockout_Cylinder = LoadClass<ABlockoutToolsParent>(nullptr, TEXT("Blueprint'/BlockoutToolsPlugin/Blueprints/Blockout_Cylinder.Blockout_Cylinder_C'"));
 
 	UPROPERTY(EditDefaultsOnly, BlueprintreadWrite)

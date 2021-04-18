@@ -9,17 +9,13 @@
 #include "UINavComponent.h"
 #include "UINavInputComponent.h"
 #include "UINavBlueprintFunctionLibrary.h"
-#include "GameFramework/InputSettings.h"
 #include "Blueprint/UserWidget.h"
 #include "Blueprint/WidgetTree.h"
 #include "Engine/DataTable.h"
 #include "Components/PanelWidget.h"
-#include "Kismet/GameplayStatics.h"
-#include "ImageUtils.h"
 #include "IImageWrapper.h"
-#include "IImageWrapperModule.h"
 
-void UUINavInputContainer::Init(UUINavWidget * NewParent)
+void UUINavInputContainer::Init(UUINavWidget * NewParent, const int GridIndex)
 {
 	ParentWidget = NewParent;
 	UINavPC = NewParent->UINavPC;
@@ -30,7 +26,7 @@ void UUINavInputContainer::Init(UUINavWidget * NewParent)
 	else if (InputRestrictions.Num() > 3) InputRestrictions.SetNum(3);
 	KeysPerInput = InputRestrictions.Num();
 
-	SetupInputBoxes();
+	SetupInputBoxes(GridIndex);
 }
 
 void UUINavInputContainer::OnSetupCompleted_Implementation()
@@ -43,6 +39,10 @@ void UUINavInputContainer::OnAddInputBox_Implementation(class UUINavInputBox* Ne
 	{
 		InputBoxesPanel->AddChild(NewInputBox);
 	}
+}
+
+void UUINavInputContainer::OnKeyRebinded_Implementation(FName InputName, FKey OldKey, FKey NewKey)
+{
 }
 
 void UUINavInputContainer::OnRebindCancelled_Implementation(ERevertRebindReason RevertReason, FKey PressedKey)
@@ -58,7 +58,7 @@ bool UUINavInputContainer::RequestKeySwap(FInputCollisionData InputCollisionData
 		SwapKeysWidget->CollidingInputBox = ParentWidget->UINavInputBoxes[CollidingInputIndex];
 		SwapKeysWidget->CurrentInputBox = ParentWidget->UINavInputBoxes[CurrentInputIndex];
 		SwapKeysWidget->InputCollisionData = InputCollisionData;
-		ParentWidget->GoToBuiltWidget(SwapKeysWidget, false, false);
+		ParentWidget->GoToBuiltWidget(SwapKeysWidget, false, false, SpawKeysWidgetZOrder);
 		return true;
 	}
 	return false;
@@ -70,14 +70,14 @@ void UUINavInputContainer::ResetKeyMappings()
 	for (UUINavInputBox* InputBox : ParentWidget->UINavInputBoxes) InputBox->ResetKeyWidgets();
 }
 
-void UUINavInputContainer::SetupInputBoxes()
+void UUINavInputContainer::SetupInputBoxes(const int GridIndex)
 {
 	if (InputBox_BP == nullptr) return;
 
 	NumberOfInputs = InputNames.Num();
 	FirstButtonIndex = ParentWidget->UINavButtons.Num();
 
-	CreateInputBoxes();
+	CreateInputBoxes(GridIndex);
 
 	LastButtonIndex = ParentWidget->UINavButtons.Num() != FirstButtonIndex ? ParentWidget->UINavButtons.Num() - 1 : FirstButtonIndex;
 
@@ -96,7 +96,7 @@ void UUINavInputContainer::SetupInputBoxes()
 	OnSetupCompleted();
 }
 
-void UUINavInputContainer::CreateInputBoxes()
+void UUINavInputContainer::CreateInputBoxes(const int GridIndex)
 {
 	if (InputBox_BP == nullptr) return;
 
@@ -133,6 +133,11 @@ void UUINavInputContainer::CreateInputBoxes()
 			ParentWidget->UINavButtons[NewButtonIndex] = NewInputBox->InputButtons[j]->NavButton;
 			ParentWidget->UINavComponents[NewComponentIndex] = NewInputBox->InputButtons[j];
 			NewInputBox->InputButtons[j]->NavButton->ButtonIndex = NewButtonIndex;
+			if (GridIndex != -1)
+			{
+				NewInputBox->InputButtons[j]->NavButton->GridIndex = GridIndex;
+				NewInputBox->InputButtons[j]->NavButton->IndexInGrid = (i * KeysPerInput) + j;
+			}
 			NewInputBox->InputButtons[j]->ComponentIndex = NewButtonIndex;
 			ParentWidget->SetupUINavButtonDelegates(NewInputBox->InputButtons[j]->NavButton);
 		}
@@ -141,18 +146,11 @@ void UUINavInputContainer::CreateInputBoxes()
 
 ERevertRebindReason UUINavInputContainer::CanRegisterKey(const UUINavInputBox * InputBox, FKey NewKey, int Index, int& CollidingActionIndex, int& CollidingKeyIndex)
 {
-	if (KeyBlacklist.Contains(NewKey) || !NewKey.IsValid())
-	{
-		return ERevertRebindReason::BlacklistedKey;
-	}
-	else if (!RespectsRestriction(NewKey, Index))
-	{
-		return ERevertRebindReason::RestrictionMismatch;
-	}
-	else if (!CanUseKey(InputBox, NewKey, CollidingActionIndex, CollidingKeyIndex))
-	{
-		return ERevertRebindReason::UsedBySameInputGroup;
-	}
+	if (!NewKey.IsValid()) return ERevertRebindReason::BlacklistedKey;
+	if (KeyWhitelist.Num() > 0 && !KeyWhitelist.Contains(NewKey)) return ERevertRebindReason::NonWhitelistedKey;
+	if (KeyBlacklist.Contains(NewKey)) return ERevertRebindReason::BlacklistedKey;
+	if (!RespectsRestriction(NewKey, Index)) return ERevertRebindReason::RestrictionMismatch;
+	if (!CanUseKey(InputBox, NewKey, CollidingActionIndex, CollidingKeyIndex)) return ERevertRebindReason::UsedBySameInputGroup;
 
 	return ERevertRebindReason::None;
 }

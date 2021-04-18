@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 8,
-	"VersionName": "1.40",
+	"Version": 9,
+	"VersionName": "1.41",
 	"FriendlyName": "Blockout Tools",
 	"Description": "A lightweight set of tools to quickly block out levels.",
 	"Category": "Level Design",

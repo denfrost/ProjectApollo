@@ -22,8 +22,8 @@ class UINAVIGATION_API UUINavInputContainer : public UUserWidget
 	
 protected:
 
-	void SetupInputBoxes();
-	void CreateInputBoxes();
+	void SetupInputBoxes(const int GridIndex);
+	void CreateInputBoxes(const int GridIndex);
 
 	//-----------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ protected:
 
 public:
 
-	void Init(class UUINavWidget* NewParent);
+	void Init(class UUINavWidget* NewParent, const int GridIndex);
 
 	/**
 	*	Called when this widget completed setting up InputBoxes
@@ -65,7 +65,14 @@ public:
 	virtual void OnAddInputBox_Implementation(class UUINavInputBox* NewInputBox);
 
 	/*
-	*	Called when a rebind was cancelled, specifying the reason for the revert.
+	*	Called when key was successfully rebinded
+	*/
+	UFUNCTION(BlueprintNativeEvent, Category = UINavWidget)
+		void OnKeyRebinded(FName InputName, FKey OldKey, FKey NewKey);
+	virtual void OnKeyRebinded_Implementation(FName InputName, FKey OldKey, FKey NewKey);
+
+	/*
+	*	Called when a rebind was cancelled, specifying the reason for the revert
 	*/
 	UFUNCTION(BlueprintNativeEvent, Category = UINavWidget)
 		void OnRebindCancelled(ERevertRebindReason RevertReason, FKey PressedKey);
@@ -146,7 +153,14 @@ public:
 		TArray<EInputRestriction> InputRestrictions;
 
 	/*
-	A list of the keys that the player shouldn't be able to use for the inputs
+	A list of the keys that the player should only be able to use for the inputs
+	*/
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UINav Input")
+	TArray<FKey> KeyWhitelist;
+	
+	/*
+	A list of the keys that the player shouldn't be able to use for the inputs.
+	Only used if KeyWhitelist is empty.
 	*/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UINav Input")
 		TArray<FKey> KeyBlacklist =
@@ -165,6 +179,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UINav Input")
 		TSubclassOf<class USwapKeysWidget> SwapKeysWidgetClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "UINav Input")
+		int SpawKeysWidgetZOrder = 0;
+	
 	/*
 	Indicates whether unused input boxes will hidden or collapsed
 	*/

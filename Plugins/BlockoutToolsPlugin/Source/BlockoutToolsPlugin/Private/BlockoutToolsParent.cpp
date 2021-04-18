@@ -86,7 +86,7 @@ void ABlockoutToolsParent::BlockoutSetMaterial()
 {
 
 	// Create MID of a blockout parent grid material
-	if (BlockoutGridParent != NULL)
+	if (BlockoutGridParent != NULL && BlockoutGridMID == NULL)
 	{
 		BlockoutGridMID = UMaterialInstanceDynamic::Create(BlockoutGridParent, this);
 	}

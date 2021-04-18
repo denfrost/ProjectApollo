@@ -11,6 +11,7 @@
 
 AISSPlayerController::AISSPlayerController()
 {
+	TeamId = 18;
 	SetGenericTeamId(FGenericTeamId(TeamId));
 }
 

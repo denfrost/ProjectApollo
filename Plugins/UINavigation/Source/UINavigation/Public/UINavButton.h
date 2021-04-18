@@ -3,7 +3,6 @@
 #pragma once
 
 #include "Components/Button.h"
-#include "Data/ButtonStyle.h"
 #include "UINavButton.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomHoverDelegate, int, Index);
@@ -11,6 +10,15 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomUnhoverDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomClickDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomPressDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomReleaseDelegate, int, Index);
+
+UENUM(BlueprintType)
+enum class EButtonStyle : uint8
+{
+	None UMETA(DisplayName = "None"),
+	Normal UMETA(DisplayName = "Normal"),
+	Hovered UMETA(DisplayName = "Hovered"),
+	Pressed UMETA(DisplayName = "Pressed")
+};
 
 /**
  * This class represents a required button type for the UI Navigation plugin
@@ -37,7 +45,7 @@ public:
 
 	/*
 	WARNING: Edit this index manually at your own risk. If the indices are
-	not correctly alligned with the automatically set indices several bugs may appear.
+	not correctly aligned with the automatically set indices several bugs may appear.
 	*/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavButton)
 		int ButtonIndex = -1;
@@ -56,7 +64,7 @@ public:
 	bool bAutoCollapse = false;
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = UINavButton)
-		bool IsValid();
+		bool IsValid(const bool bIgnoreDisabledUINavButton = true) const;
 
 	UFUNCTION()
 		void OnHover();

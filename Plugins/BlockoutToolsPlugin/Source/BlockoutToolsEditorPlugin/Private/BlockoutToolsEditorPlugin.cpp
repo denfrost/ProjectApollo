@@ -21,6 +21,7 @@ void FBlockoutToolsEditorPluginModule::StartupModule()
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Box))));
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Cone))));
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Corner_Curved))));
+	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Corner_Ramp))));
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Cylinder))));
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Doorway))));
 	IPlacementModeModule::Get().RegisterPlaceableItem(BlockoutTools.UniqueHandle, MakeShareable(new FPlaceableItem(nullptr, FAssetData(Blockout_Railing))));

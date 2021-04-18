@@ -24,7 +24,7 @@ protected:
 	bool bIgnoreSpinBoxCommit = false;
 
 	UFUNCTION()
-		void HandleOnSliderValueChanged(float InValue);
+		void HandleOnSliderValueChanged(const float InValue);
 	UFUNCTION()
 		void HandleOnMouseCaptureBegin();
 	UFUNCTION()
@@ -32,14 +32,14 @@ protected:
 	UFUNCTION()
 		void HandleOnSpinBoxValueChanged(float InValue, ETextCommit::Type CommitMethod);
 
-	float IndexFromPercent(float Value);
-	float IndexFromValue(float Value);
+	float IndexFromPercent(const float Value);
+	float IndexFromValue(const float Value);
 
 public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider, meta = (ClampMin="0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider)
 		float MinValue = 0.0f;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider, meta = (ClampMin="0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider)
 		float MaxValue = 1.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider, meta = (ClampMin="0"))
 		float Interval = 0.1f;
@@ -47,7 +47,7 @@ public:
 		int MaxDecimalDigits = 1;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider, meta = (ClampMin="0"))
 		int MinDecimalDigits = 0;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider, meta = (ClampMin="0"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavSlider)
 		bool bUseComma = false;
 
 	float Difference = 0.0f;
@@ -76,7 +76,7 @@ public:
 		FORCEINLINE float GetCurrentValue() const { return (MinValue + OptionIndex * Interval); }
 
 	UFUNCTION(BlueprintCallable, Category = UINavSlider)
-		void SetValueClamped(float Value);
+		void SetValueClamped(const float Value);
 
 	//Get Current Slider value (0 to 1)
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = UINavSlider)
