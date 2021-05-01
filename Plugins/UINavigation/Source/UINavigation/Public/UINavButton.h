@@ -5,13 +5,15 @@
 #include "Components/Button.h"
 #include "UINavButton.generated.h"
 
+class UUINavComponent;
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomHoverDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomUnhoverDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomClickDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomPressDelegate, int, Index);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FCustomReleaseDelegate, int, Index);
 
-UENUM(BlueprintType)
+UENUM(BlueprintType, meta = (ScriptName = "UINavButtonStyle"))
 enum class EButtonStyle : uint8
 {
 	None UMETA(DisplayName = "None"),
@@ -56,6 +58,9 @@ public:
 	//This button's index in its associated grid
 	UPROPERTY(BlueprintReadOnly, Category = UINavButton)
 		int IndexInGrid = - 1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = UINavButton)
+		UUINavComponent* NavComp = nullptr;
 
 	EButtonStyle CurrentStyle = EButtonStyle::Normal;
 
