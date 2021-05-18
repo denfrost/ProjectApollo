@@ -93,6 +93,15 @@
 			"Name": "TimeClock",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/6f6a4afb66af43deb946a48b78d8c80a"
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win32",
+				"Win64",
+				"Linux"
+			]
 		}
 	],
 	"TargetPlatforms": [
