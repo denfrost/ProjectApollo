@@ -102,6 +102,11 @@
 				"Win64",
 				"Linux"
 			]
+		},
+		{
+			"Name": "LightMapUEr",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/3e5c949daaab494fb5dbf54b29b0d38b"
 		}
 	],
 	"TargetPlatforms": [
