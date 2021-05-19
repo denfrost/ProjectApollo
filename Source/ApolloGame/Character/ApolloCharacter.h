@@ -16,6 +16,15 @@ public:
 	// Sets default values for this character's properties
 	AApolloCharacter();
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Feedback")
+	TArray<TSoftObjectPtr<USoundBase>> DamageSounds;
+
+	UFUNCTION(BlueprintPure, Category = "Feedback")
+	USoundBase* GetSound(USoundBase* InSound);
+
+	UFUNCTION(BlueprintPure, Category = "Feedback")
+	TSoftObjectPtr<USoundBase> GetLazyLoadedSound(TSoftObjectPtr<USoundBase> InSound);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

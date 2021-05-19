@@ -23,4 +23,8 @@ public:
 	//What is our Team
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
 		FGenericTeamId TeamId;
+
+protected:
+
+	
 };

@@ -2,14 +2,18 @@
 
 
 #include "ApolloAIController.h"
+#include <Perception/AIPerceptionSystem.h>
 
 AApolloAIController::AApolloAIController()
 {
 	SetGenericTeamId(FGenericTeamId(TeamId));
+	//PerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>("PerceptionComponent");
+	
 }
 
 ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Other) const
 {
+	UAIPerceptionSystem::GetCurrent(GetWorld())->UpdateListener(*PerceptionComponent);
 	if (const APawn* OtherPawn = Cast<APawn>(&Other)) {
 
 		if (const IGenericTeamAgentInterface* TeamAgent = Cast<IGenericTeamAgentInterface>(OtherPawn->GetController()))
@@ -35,3 +39,4 @@ ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Ot
 
 	return ETeamAttitude::Neutral;
 }
+

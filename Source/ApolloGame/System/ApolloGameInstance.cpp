@@ -163,18 +163,30 @@ void UApolloGameInstance::SpawnWeapon(FString WeaponName)
 
 void UApolloGameInstance::HealPlayer(float HealAmount)
 {
-	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+	Player = Cast<AApolloCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	if (Player)
 	{
-		IConsoleCommandInterface::Execute_HealPlayer(Player, HealAmount);
+		if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+		{
+			IConsoleCommandInterface::Execute_HealPlayer(Player, HealAmount);
+		}
 	}
+	
 }
 
 void UApolloGameInstance::RecoverMagic(float RecoverAmount)
 {
-	if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+	Player = Cast<AApolloCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+
+	if (Player)
 	{
-		IConsoleCommandInterface::Execute_RecoverApollo(Player, RecoverAmount);
+		if (Player->GetClass()->ImplementsInterface(UConsoleCommandInterface::StaticClass()))
+		{
+			IConsoleCommandInterface::Execute_RecoverApollo(Player, RecoverAmount);
+		}
 	}
+	
 }
 
 void UApolloGameInstance::InitializeManualSaveArray()
