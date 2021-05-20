@@ -1,7 +1,7 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #include "Core/SteamFriends.h"
-
+#include "SteamBridgeUtils.h"
 #include "Engine/Texture2D.h"
 #include "Steam.h"
 
@@ -114,9 +114,9 @@ int32 USteamFriends::GetClanChatMessage(FSteamID SteamIDClanChat, int32 MessageI
 {
 	EChatEntryType TmpEntryType;
 	TArray<char> TmpMessage;
-	TmpMessage.SetNum(MAX_int32);
+	TmpMessage.SetNum(2048);
 	CSteamID TmpSteamID;
-	int32 res = SteamFriends()->GetClanChatMessage(SteamIDClanChat, MessageID, TmpMessage.GetData(), MAX_int32, &TmpEntryType, &TmpSteamID);
+	int32 res = SteamFriends()->GetClanChatMessage(SteamIDClanChat, MessageID, TmpMessage.GetData(), 2048, &TmpEntryType, &TmpSteamID);
 	if (res < 0)
 	{
 		return -1;
@@ -150,9 +150,9 @@ int32 USteamFriends::GetFriendCount(const TArray<ESteamFriendFlags>& FriendFlags
 
 	if (flags == 0)
 	{
-		for (int32 i = 0; i < FriendFlags.Num(); i++)
+		for (const auto& Flag : FriendFlags)
 		{
-			flags |= 1 << (int32)FriendFlags[i];
+			flags |= 1 << (int32)Flag;
 		}
 	}
 
@@ -175,8 +175,8 @@ int32 USteamFriends::GetFriendMessage(FSteamID SteamIDFriend, int32 MessageIndex
 {
 	EChatEntryType TmpEntryType;
 	TArray<char> TmpMessage;
-	TmpMessage.SetNum(MAX_int32);
-	int32 res = SteamFriends()->GetFriendMessage(SteamIDFriend, MessageIndex, TmpMessage.GetData(), MAX_int32, &TmpEntryType);
+	TmpMessage.SetNum(2048);
+	int32 res = SteamFriends()->GetFriendMessage(SteamIDFriend, MessageIndex, TmpMessage.GetData(), 2048, &TmpEntryType);
 	if (res < 0)
 	{
 		return 0;
@@ -251,7 +251,7 @@ TArray<ESteamUserRestrictions> USteamFriends::GetUserRestrictions() const
 {
 	TArray<ESteamUserRestrictions> TmpArray;
 	uint32 flags = SteamFriends()->GetUserRestrictions();
-	for (int i = 0; i < 32; i++)
+	for (int32 i = 0; i < 32; i++)
 	{
 		if (flags & 1 << i)
 		{

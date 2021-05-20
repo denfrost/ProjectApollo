@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #include "Core/SteamMatchmaking.h"
 
@@ -34,26 +34,27 @@ USteamMatchmaking::~USteamMatchmaking()
 	OnLobbyMatchListCallback.Unregister();
 }
 
-int32 USteamMatchmaking::AddFavoriteGame(int32 AppID, const FString& IP, int32 ConnPort, int32 QueryPort, const TArray<ESteamFavoriteFlags>& Flags, int32 TimeLastPlayedOnServer) const
+int32 USteamMatchmaking::AddFavoriteGame(int32 AppID, const FString& IP, int32 ConnPort, int32 QueryPort, const TArray<ESteamFavoriteFlags>& Flags, const FDateTime& TimeLastPlayedOnServer) const
 {
 	uint32 TmpIP = 0;
 	USteamBridgeUtils::ConvertIPStringToUint32(IP, TmpIP);
 
 	int32 TmpFlags = 0;
-	for (int32 i = 0; i < Flags.Num(); i++)
+	for (const auto& Flag : Flags)
 	{
-		TmpFlags |= 1 << (int32)Flags[i];
+		TmpFlags |= 1 << (int32)Flag;
 	}
 
-	return SteamMatchmaking()->AddFavoriteGame(AppID, TmpIP, ConnPort, QueryPort, TmpFlags, TimeLastPlayedOnServer);
+	return SteamMatchmaking()->AddFavoriteGame(AppID, TmpIP, ConnPort, QueryPort, TmpFlags, TimeLastPlayedOnServer.ToUnixTimestamp());
 }
 
-bool USteamMatchmaking::GetFavoriteGame(int32 GameIndex, int32& AppID, FString& IP, int32& ConnPort, int32& QueryPort, TArray<ESteamFavoriteFlags>& Flags, int32& TimeLastPlayedOnServer) const
+bool USteamMatchmaking::GetFavoriteGame(int32 GameIndex, int32& AppID, FString& IP, int32& ConnPort, int32& QueryPort, TArray<ESteamFavoriteFlags>& Flags, FDateTime& TimeLastPlayedOnServer) const
 {
-	uint32 TmpIP = 0, TmpFlags = 0;
+	uint32 TmpIP = 0, TmpFlags = 0, TmpTime;
 
-	bool bResult = SteamMatchmaking()->GetFavoriteGame(GameIndex, (uint32*)&AppID, &TmpIP, (uint16*)&ConnPort, (uint16*)&QueryPort, &TmpFlags, (uint32*)&TimeLastPlayedOnServer);
+	bool bResult = SteamMatchmaking()->GetFavoriteGame(GameIndex, (uint32*)&AppID, &TmpIP, (uint16*)&ConnPort, (uint16*)&QueryPort, &TmpFlags, &TmpTime);
 	IP = USteamBridgeUtils::ConvertIPToString(TmpIP);
+	TimeLastPlayedOnServer = FDateTime::FromUnixTimestamp(TmpTime);
 
 	for (int32 i = 0; i < 32; i++)
 	{
@@ -113,9 +114,9 @@ bool USteamMatchmaking::RemoveFavoriteGame(int32 AppID, const FString& IP, int32
 	USteamBridgeUtils::ConvertIPStringToUint32(IP, TmpIP);
 
 	int32 TmpFlags = 0;
-	for (int32 i = 0; i < Flags.Num(); i++)
+	for (const auto& Flag : Flags)
 	{
-		TmpFlags |= 1 << (int32)Flags[i];
+		TmpFlags |= 1 << (int32)Flag;
 	}
 
 	return SteamMatchmaking()->RemoveFavoriteGame(AppID, TmpIP, ConnPort, QueryPort, TmpFlags);

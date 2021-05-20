@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -94,7 +94,7 @@ public:
 	 * @param const FString & UserCSS - This allows you to set a CSS style to every page displayed by this browser. Use NULL if you do not require this functionality.
 	 * @return FSteamAPICall - SteamAPICall_t to be used with a HTML_BrowserReady_t call result.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|HTMLSurface")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|HTMLSurface")
 	FSteamAPICall CreateBrowser(const FString& UserAgent, const FString& UserCSS) const { return SteamHTMLSurface()->CreateBrowser(TCHAR_TO_UTF8(*UserAgent), TCHAR_TO_UTF8(*UserCSS)); }
 
 	/**
@@ -323,14 +323,14 @@ public:
 	 * @param const FString & Hostname - The hostname of the server to set the cookie for. ('Host' attribute)
 	 * @param const FString & Key - The cookie name to set.
 	 * @param const FString & Value - The cookie value to set.
+	 * @param FDateTime Expires - Sets the 'Expires' attribute on the cookie to the specified timestamp in a friendly format.
 	 * @param const FString & Path - Sets the 'Path' attribute on the cookie. You can use this to restrict the cookie to a specific path on the domain. e.g. "/accounts"
-	 * @param int32 Expires - Sets the 'Expires' attribute on the cookie to the specified timestamp in Unix epoch format (seconds since Jan 1st 1970).
 	 * @param bool bSecure - Sets the 'Secure' attribute.
 	 * @param bool bHTTPOnly - Sets the 'HttpOnly' attribute.
 	 * @return void
 	 */
 	UFUNCTION(BlueprintCallable, Category = "SteamBridgeCore|HTMLSurface")
-	void SetCookie(const FString& Hostname, const FString& Key, const FString& Value, const FString& Path = "/", int32 Expires = 0, bool bSecure = false, bool bHTTPOnly = false);
+	void SetCookie(const FString& Hostname, const FString& Key, const FString& Value, FDateTime Expires, const FString& Path = "/", bool bSecure = false, bool bHTTPOnly = false);
 
 	/**
 	 * Scroll the current page horizontally.

@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #include "Core/SteamUGC.h"
 
@@ -69,12 +69,15 @@ FUGCQueryHandle USteamUGC::CreateQueryUserUGCRequest(FAccountID AccountID, EStea
 	return SteamUGC()->CreateQueryUserUGCRequest(AccountID, (EUserUGCList)ListType, (EUGCMatchingUGCType)MatchingUGCType, (EUserUGCListSortOrder)SortOrder, CreatorAppID, ConsumerAppID, Page);
 }
 
-bool USteamUGC::GetItemInstallInfo(FPublishedFileId PublishedFileID, int64& SizeOnDisk, FString& FolderName, int32 FolderSize, int32& TimeStamp) const
+
+bool USteamUGC::GetItemInstallInfo(FPublishedFileId PublishedFileID, int64& SizeOnDisk, FString& FolderName, int32 FolderSize, FDateTime& TimeStamp) const
 {
+	uint32 TmpTime;
 	TArray<char> TmpData;
 	TmpData.SetNum(FolderSize);
-	bool bResult = SteamUGC()->GetItemInstallInfo(PublishedFileID, (uint64*)&SizeOnDisk, TmpData.GetData(), TmpData.Num(), (uint32*)&TimeStamp);
+	bool bResult = SteamUGC()->GetItemInstallInfo(PublishedFileID, (uint64*)&SizeOnDisk, TmpData.GetData(), TmpData.Num(), &TmpTime);
 	FolderName = UTF8_TO_TCHAR(TmpData.GetData());
+	TimeStamp = FDateTime::FromUnixTimestamp(TmpTime);
 	return bResult;
 }
 
@@ -94,9 +97,9 @@ bool USteamUGC::GetQueryUGCChildren(FUGCQueryHandle handle, int32 index, TArray<
 	TArray<PublishedFileId_t> TmpData;
 	TmpData.SetNum(MaxEntries);
 	bool bResult = SteamUGC()->GetQueryUGCChildren(handle, index, TmpData.GetData(), TmpData.Num());
-	for (int32 i = 0; i < TmpData.Num(); i++)
+	for (const auto& Entry : TmpData)
 	{
-		PublishedFileIDs.Add(TmpData[i]);
+		PublishedFileIDs.Add(Entry);
 	}
 	return bResult;
 }
@@ -153,9 +156,9 @@ bool USteamUGC::SetItemTags(FUGCUpdateHandle UpdateHandle, const TArray<FString>
 {
 	TArray<char*> TmpTags;
 	SteamParamStringArray_t TmpTagsArray;
-	for (int32 i = 0; i < Tags.Num(); i++)
+	for (const auto& Tag : Tags)
 	{
-		TmpTags.Add(TCHAR_TO_UTF8(*Tags[i]));
+		TmpTags.Add(TCHAR_TO_UTF8(*Tag));
 	}
 
 	TmpTagsArray.m_ppStrings = (const char**)TmpTags.GetData();

@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -200,13 +200,13 @@ public:
 	int32 GetFileSize(const FString& FileName) const { return SteamRemoteStorage()->GetFileSize(TCHAR_TO_UTF8(*FileName)); }
 
 	/**
-	 * Gets the specified file's last modified timestamp in Unix epoch format (seconds since Jan 1st 1970).
+	 * Gets the specified file's last modified timestamp in a friendly format.
 	 *
 	 * @param const FString & FileName - The name of the file.
-	 * @return int64 - The last modified timestamp in Unix epoch format (seconds since Jan 1st 1970).
+	 * @return FDateTime - The last modified timestamp in a friendly format.
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|RemoteStorage")
-	int64 GetFileTimestamp(const FString& FileName) const { return SteamRemoteStorage()->GetFileTimestamp(TCHAR_TO_UTF8(*FileName)); }
+	FDateTime GetFileTimestamp(const FString& FileName) const { return FDateTime::FromUnixTimestamp(SteamRemoteStorage()->GetFileTimestamp(TCHAR_TO_UTF8(*FileName))); }
 
 	/**
 	 * Gets the number of bytes available, and used on the users Steam Cloud storage.

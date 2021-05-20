@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -45,7 +45,7 @@ public:
 	 *	RequestUserStats has completed and successfully returned its callback for the specified user.
 	 *	The stat must be allowed to be set by game server.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
 	bool ClearUserAchievement(FSteamID SteamIDUser, const FString& Name) const { return SteamGameServerStats()->ClearUserAchievement(SteamIDUser, TCHAR_TO_UTF8(*Name)); }
 
 	/**
@@ -92,7 +92,16 @@ public:
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
 	bool GetUserStatFloat(FSteamID SteamIDUser, const FString& Name, float& Data) { return SteamGameServerStats()->GetUserStat(SteamIDUser, TCHAR_TO_UTF8(*Name), &Data); }
 
-	// #TODO RequestUserStats
+	/**
+	* Asynchronously downloads stats and achievements for the specified user from the server.
+	* These stats will only be auto-updated for clients currently playing on the server.
+	* For other users you'll need to call this function again to refresh any data.
+	*
+	* @param FSteamID SteamIDUser - The Steam ID of the user to request the stats for.
+	* @return FSteamAPICall - SteamAPICall_t to be used with a GSStatsReceived_t call result.
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
+	FSteamAPICall RequestUserStats(FSteamID SteamIDUser) const { return SteamGameServerStats()->RequestUserStats(SteamIDUser); }
 
 	/**
 	 * Unlocks an achievement for the specified user.
@@ -108,7 +117,7 @@ public:
 	 * RequestUserStats has completed and successfully returned its callback for the specified user.
 	 * The stat must be allowed to be set by game server.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
 	bool SetUserAchievement(FSteamID SteamIDUser, const FString& Name) const { return SteamGameServerStats()->SetUserAchievement(SteamIDUser, TCHAR_TO_UTF8(*Name)); }
 
 	/**
@@ -127,7 +136,7 @@ public:
 	 * The type passed to this function must match the type listed in the App Admin panel of the Steamworks website.
 	 * The stat must be allowed to be set by game server.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
 	bool SetUserStatInt(FSteamID SteamIDUser, const FString& Name, int32 Data) { return SteamGameServerStats()->SetUserStat(SteamIDUser, TCHAR_TO_UTF8(*Name), Data); }
 
 	/**
@@ -146,10 +155,25 @@ public:
 	 * The type passed to this function must match the type listed in the App Admin panel of the Steamworks website.
 	 * The stat must be allowed to be set by game server.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
 	bool SetUserStatFloat(FSteamID SteamIDUser, const FString& Name, float Data) { return SteamGameServerStats()->SetUserStat(SteamIDUser, TCHAR_TO_UTF8(*Name), Data); }
 
-	// #TODO StoreUserStats
+	/**
+	* Send the changed stats and achievements data to the server for permanent storage for the specified user.
+	* If this fails then nothing is sent to the server. It's advisable to keep trying until the call is successful.
+	* This call can be rate limited. Call frequency should be on the order of minutes, rather than seconds.
+	* You should only be calling this during major state changes such as the end of a round, the map changing, or the user leaving a server.
+	* If you have stats or achievements that you have saved locally but haven't uploaded with this function when your application process ends
+	* then this function will automatically be called.
+	* You can find additional debug information written to the %steam_install%\logs\stats_log.txt file.
+	*
+	* @param FSteamID SteamIDUser - The Steam ID of the user to store the stats of.
+	* @return FSteamAPICall - SteamAPICall_t to be used with a GSStatsStored_t call result.
+	* If m_eResult has a result of k_EResultInvalidParam, then one or more stats uploaded has been rejected, either because they broke constraints or were out of date.
+	* In this case the server sends back updated values and the stats should be updated locally to keep in sync.
+	*/
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
+	FSteamAPICall StoreUserStats(FSteamID SteamIDUser) const { return SteamGameServerStats()->StoreUserStats(SteamIDUser); }
 
 	/**
 	 * Updates an AVGRATE stat with new values for the specified user.
@@ -168,7 +192,7 @@ public:
 	 * The type must be AVGRATE in the Steamworks Partner backend.
 	 * The stat must be allowed to be set by game server.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServerStats")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServerStats")
 	bool UpdateUserAvgRateStat(FSteamID SteamIDUser, const FString& Name, float CountThisSession, float SessionLength) const;
 
 	/** Delegates */

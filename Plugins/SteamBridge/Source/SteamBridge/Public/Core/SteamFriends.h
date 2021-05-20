@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -14,7 +14,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FOnAvatarImageLoadedDelegate, FSte
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnClanOfficerListResponseDelegate, FSteamID, SteamID, int32, OfficersCount, bool, bSuccess);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnDownloadClanActivityCountsResultDelegate, bool, bSuccess);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnFriendRichPresenceUpdateDelegate, FSteamID, SteamID, int32, AppID);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FOnFriendsEnumerateFollowingListDelegate, ESteamResult, Result, TArray<FSteamID>, SteamIDs, int32, ResultsReturned, int32, TotalResults);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_FourParams(FOnFriendsEnumerateFollowingListDelegate, ESteamResult, Result, const TArray<FSteamID>&, SteamIDs, int32, ResultsReturned, int32, TotalResults);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnFriendsGetFollowerCountDelegate, ESteamResult, Result, FSteamID, SteamID, int32, Count);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnFriendsIsFollowingDelegate, ESteamResult, Result, FSteamID, SteamID, bool, bIsFollowing);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnGameConnectedChatJoinDelegate, FSteamID, SteamIDClanChat, FSteamID, SteamIDUser);
@@ -301,10 +301,10 @@ public:
 	 * Gets the timestamp of when the user played with someone on their recently-played-with list.
 	 *
 	 * @param FSteamID SteamIDFriend - The Steam ID of the user on the recently-played-with list to get the timestamp for.
-	 * @return int32 - The time is provided in Unix epoch format (seconds since Jan 1st 1970). Steam IDs not in the recently-played-with list return 0.
+	 * @return FDateTime - The time is provided in a friendly format. Steam IDs not in the recently-played-with list return 0.
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
-	int32 GetFriendCoplayTime(FSteamID SteamIDFriend) const { return SteamFriends()->GetFriendCoplayTime(SteamIDFriend); }
+	FDateTime GetFriendCoplayTime(FSteamID SteamIDFriend) const { return FDateTime::FromUnixTimestamp(SteamFriends()->GetFriendCoplayTime(SteamIDFriend)); }
 
 	/**
 	 * Gets the number of users the client knows about who meet a specified criteria. (Friends, blocked, users on the same server, etc)
@@ -575,7 +575,7 @@ public:
 	 * The Steam ID provided to steamIDFriend is not a friend or does not share the same Steam Group as the current user.
 	 * The value provided to pchConnectString was too long.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool InviteUserToGame(FSteamID SteamIDFriend, const FString& ConnectString) const { return SteamFriends()->InviteUserToGame(SteamIDFriend, TCHAR_TO_UTF8(*ConnectString)); }
 
 	/**
@@ -646,7 +646,7 @@ public:
 	 * @param FSteamID SteamIDClan - The Steam ID of the Steam group to join.
 	 * @return FSteamAPICall - SteamAPICall_t to be used with a JoinClanChatRoomCompletionResult_t call result.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	FSteamAPICall JoinClanChatRoom(FSteamID SteamIDClan) const { return SteamFriends()->JoinClanChatRoom(SteamIDClan); }
 
 	/**
@@ -668,7 +668,7 @@ public:
 	 * The current user is currently rate limited.
 	 * The current user is chat restricted.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool OpenClanChatWindowInSteam(FSteamID SteamIDClanChat) const { return SteamFriends()->OpenClanChatWindowInSteam(SteamIDClanChat); }
 
 	/**
@@ -678,7 +678,7 @@ public:
 	 * @param const FString & MsgToSend - The UTF-8 formatted message to send.
 	 * @return bool - true if the message was successfully sent. false if the current user is rate limited or chat restricte
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool ReplyToFriendMessage(FSteamID SteamIDFriend, const FString& MsgToSend) const { return SteamFriends()->ReplyToFriendMessage(SteamIDFriend, TCHAR_TO_UTF8(*MsgToSend)); }
 
 	/**
@@ -689,7 +689,7 @@ public:
 	 * @param FSteamID SteamIDClan - The Steam group to get the officers list for.
 	 * @return FSteamAPICall - SteamAPICall_t to be used with a ClanOfficerListResponse_t call result.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	FSteamAPICall RequestClanOfficerList(FSteamID SteamIDClan) const { return SteamFriends()->RequestClanOfficerList(SteamIDClan); }
 
 	/**
@@ -728,7 +728,7 @@ public:
 	 * The current user is chat restricted.
 	 * The message in pchText exceeds 2048 characters.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool SendClanChatMessage(FSteamID SteamIDClanChat, const FString& Text) const { return SteamFriends()->SendClanChatMessage(SteamIDClanChat, TCHAR_TO_UTF8(*Text)); }
 
 	/**
@@ -751,7 +751,7 @@ public:
 	 * @param bool bInterceptEnabled - 	Turn friends message interception on (true) or off (false)?
 	 * @return bool - Always returns true
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool SetListenForFriendsMessages(bool bInterceptEnabled) const { return SteamFriends()->SetListenForFriendsMessages(bInterceptEnabled); }
 
 	/**
@@ -762,7 +762,7 @@ public:
 	 * @param const FString & PersonaName - The users new persona name. Can not be longer than k_cchPersonaNameMax bytes.
 	 * @return FSteamAPICall - SteamAPICall_t to be used with a SetPersonaNameResponse_t call result.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	FSteamAPICall SetPersonaName(const FString& PersonaName) const { return SteamFriends()->SetPersonaName(TCHAR_TO_UTF8(*PersonaName)); }
 
 	/**
@@ -786,7 +786,7 @@ public:
 	 * pchValue was longer than k_cchMaxRichPresenceValueLength.
 	 * The user has reached the maximum amount of rich presence keys as defined by k_cchMaxRichPresenceKeys.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Friends")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Friends")
 	bool SetRichPresence(const FString& Key, const FString& Value) const { return SteamFriends()->SetRichPresence(TCHAR_TO_UTF8(*Key), TCHAR_TO_UTF8(*Value)); }
 
 	/** Delegates */

@@ -1,6 +1,5 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
-#pragma once
 
 #include "Core/SteamHTMLSurface.h"
 
@@ -58,9 +57,9 @@ USteamHTMLSurface::~USteamHTMLSurface()
 	OnHTMLVerticalScrollCallback.Unregister();
 }
 
-void USteamHTMLSurface::SetCookie(const FString& Hostname, const FString& Key, const FString& Value, const FString& Path, int32 Expires, bool bSecure, bool bHTTPOnly)
+void USteamHTMLSurface::SetCookie(const FString& Hostname, const FString& Key, const FString& Value, FDateTime Expires, const FString& Path, bool bSecure, bool bHTTPOnly)
 {
-	SteamHTMLSurface()->SetCookie(TCHAR_TO_UTF8(*Hostname), TCHAR_TO_UTF8(*Key), TCHAR_TO_UTF8(*Value), TCHAR_TO_UTF8(*Path), Expires, bSecure, bHTTPOnly);
+	SteamHTMLSurface()->SetCookie(TCHAR_TO_UTF8(*Hostname), TCHAR_TO_UTF8(*Key), TCHAR_TO_UTF8(*Value), TCHAR_TO_UTF8(*Path), Expires.ToUnixTimestamp(), bSecure, bHTTPOnly);
 }
 
 void USteamHTMLSurface::OnHTMLBrowserReady(HTML_BrowserReady_t* pParam)

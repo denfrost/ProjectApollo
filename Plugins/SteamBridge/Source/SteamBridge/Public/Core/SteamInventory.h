@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -302,11 +302,11 @@ public:
 	 * Gets the server time at which the result was generated.
 	 *
 	 * @param FSteamInventoryResult ResultHandle - 	The inventory result handle to get the timestamp for.
-	 * @return int32 - The timestamp is provided as Unix epoch time (Time since Jan 1st, 1970)
+	 * @return FDateTime - The timestamp is provided as a friendly time
 	 * You can compare this value against ISteamUtils::GetServerRealTime to determine the age of the result.
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Inventory")
-	int32 GetResultTimestamp(FSteamInventoryResult ResultHandle) const { return SteamInventory()->GetResultTimestamp(ResultHandle); }
+	FDateTime GetResultTimestamp(FSteamInventoryResult ResultHandle) const { return FDateTime::FromUnixTimestamp(SteamInventory()->GetResultTimestamp(ResultHandle)); }
 
 	/**
 	 * Grant all potential one-time promotional items to the current user.

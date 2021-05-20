@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -14,7 +14,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnAddAppDependencyResultDelegate
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnAddUGCDependencyResultDelegate, ESteamResult, Result, FPublishedFileId, PublishedFileID, FPublishedFileId, ChildPublishedFileID);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnCreateItemResultDelegate, ESteamResult, Result, FPublishedFileId, PublishedFileID, bool, bUserNeedsToAcceptWorkshopLegalAgreement);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnDownloadItemResultDelegate, int32, AppID, FPublishedFileId, PublishedFileID, ESteamResult, Result);
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FOnGetAppDependenciesResultDelegate, ESteamResult, Result, FPublishedFileId, PublishedFileID, TArray<int32>, AppID, int32, NumAppDependencies, int32, TotalNumAppDependencies);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FOnGetAppDependenciesResultDelegate, ESteamResult, Result, FPublishedFileId, PublishedFileID, const TArray<int32>&, AppID, int32, NumAppDependencies, int32, TotalNumAppDependencies);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnDeleteItemResultDelegate, ESteamResult, Result, FPublishedFileId, PublishedFileID);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_FiveParams(FOnGetUserItemVoteResultDelegate, FPublishedFileId, PublishedFileID, ESteamResult, Result, bool, bVotedUp, bool, bVotedDown, bool, bVoteSkipped);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnItemInstalledDelegate, int32, AppID, FPublishedFileId, PublishedFileID);
@@ -296,14 +296,14 @@ public:
 	 * @param int64 & SizeOnDisk - Returns the size of the workshop item in bytes.
 	 * @param FString & FolderName - Returns the absolute path to the folder containing the content by copying it.
 	 * @param int32 FolderSize - The size of pchFolder in bytes.
-	 * @param int32 & TimeStamp - Returns the time when the workshop item was last updated.
+	 * @param FDateTime & TimeStamp - Returns the time when the workshop item was last updated.
 	 * @return bool - true if the workshop item is already installed. false in the following cases:
 	 * cchFolderSize is 0.
 	 * The workshop item has no content.
 	 * The workshop item is not installed.
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|UGC")
-	bool GetItemInstallInfo(FPublishedFileId PublishedFileID, int64& SizeOnDisk, FString& FolderName, int32 FolderSize, int32& TimeStamp) const;
+	bool GetItemInstallInfo(FPublishedFileId PublishedFileID, int64& SizeOnDisk, FString& FolderName, int32 FolderSize, FDateTime& TimeStamp) const;
 
 	/**
 	 * Gets the current state of a workshop item on this client.

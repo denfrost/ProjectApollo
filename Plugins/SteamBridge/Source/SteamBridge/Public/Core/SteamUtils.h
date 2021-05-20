@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -170,12 +170,12 @@ public:
 	int32 GetSecondsSinceComputerActive() const { return SteamUtils()->GetSecondsSinceComputerActive(); }
 
 	/**
-	 * Returns the Steam server time in Unix epoch format. (Number of seconds since Jan 1, 1970 UTC)
+	 * Returns the Steam server time in a friendly format.
 	 *
-	 * @return int32
+	 * @return FDateTime
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Utils")
-	int32 GetServerRealTime() const { return SteamUtils()->GetServerRealTime(); }
+	FDateTime GetServerRealTime() const { return FDateTime::FromUnixTimestamp(SteamUtils()->GetServerRealTime()); }
 
 	/**
 	 * Returns the language the steam client is running in.

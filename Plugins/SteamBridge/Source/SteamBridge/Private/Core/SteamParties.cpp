@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #include "Core/SteamParties.h"
 
@@ -28,12 +28,11 @@ bool USteamParties::GetAvailableBeaconLocations(TArray<FSteamPartyBeaconLocation
 {
 	TArray<SteamPartyBeaconLocation_t> TmpArray;
 	int32 Num = 0;
-	GetNumAvailableBeaconLocations(Num);
 	bool bResult = SteamParties()->GetAvailableBeaconLocations(TmpArray.GetData(), Num);
 
-	for (int32 i = 0; i < TmpArray.Num(); i++)
+	for (const auto& Beacon : TmpArray)
 	{
-		LocationList.Add(TmpArray[i]);
+		LocationList.Add(Beacon);
 	}
 
 	return bResult;

@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -194,7 +194,7 @@ public:
 	 * @return FString
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Input")
-	FString GetGlyphForActionOrigin(ESteamInputActionOrigin Origin) const { return UTF8_TO_TCHAR(*SteamInput()->GetGlyphForActionOrigin((EInputActionOrigin)Origin)); }
+	FString GetGlyphForActionOrigin(ESteamInputActionOrigin Origin) const { return UTF8_TO_TCHAR(SteamInput()->GetGlyphForActionOrigin((EInputActionOrigin)Origin)); }
 
 	/**
 	 * Returns the input type (device model) for the specified controller. This tells you if a given controller is a Steam controller, XBox 360 controller, PS4 controller, etc.
@@ -274,7 +274,7 @@ public:
 	 * @param FInputHandle InputHandle - The handle of the controller you want to bring up the binding screen for.
 	 * @return bool - true for success; false if overlay is disabled/unavailable, or the user is not in Big Picture Mode.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Input")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Input")
 	bool ShowBindingPanel(FInputHandle InputHandle) const { return SteamInput()->ShowBindingPanel(InputHandle); }
 
 	/**

@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 #include "CoreMinimal.h"
@@ -191,14 +191,14 @@ public:
 	bool GetDlcDownloadProgress(int32 AppID, int64& BytesDownloaded, int64& BytesTotal) const { return SteamApps()->GetDlcDownloadProgress(AppID, (uint64*)&BytesDownloaded, (uint64*)&BytesTotal); }
 
 	/**
-	 * Gets the time of purchase of the specified app in Unix epoch format (time since Jan 1st, 1970).
+	 * Gets the time of purchase of the specified app in a readable format.
 	 * This is useful for rewarding users based on their initial purchase date.
 	 *
 	 * @param int32 AppID - The App ID to get the purchase time for.
-	 * @return int32 - The earliest purchase time in Unix epoch format (seconds since Jan 1st, 1970).
+	 * @return FDateTime - The earliest purchase time in a readable format.
 	 */
 	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Apps")
-	int32 GetEarliestPurchaseUnixTime(int32 AppID) const { return SteamApps()->GetEarliestPurchaseUnixTime(AppID); }
+	FDateTime GetEarliestPurchaseUnixTime(int32 AppID) const { return FDateTime::FromUnixTimestamp(SteamApps()->GetEarliestPurchaseUnixTime(AppID)); }
 
 	/**
 	 * Asynchronously retrieves metadata details about a specific file in the depot manifest.
@@ -259,7 +259,7 @@ public:
 	 * @param bool bMissingFilesOnly - 	Only scan for missing files, don't verify the checksum of each file.
 	 * @return bool
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|Apps")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|Apps")
 	bool MarkContentCorrupt(bool bMissingFilesOnly) const { return SteamApps()->MarkContentCorrupt(bMissingFilesOnly); }
 
 	/**

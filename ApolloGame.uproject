@@ -16,11 +16,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "AsyncLoadingScreen",
-			"Enabled": true,
-			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/01f39767dc6b4290877f38365787cbf8"
-		},
-		{
 			"Name": "BlockoutToolsPlugin",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/d337b97aca8947a893526964e179acfd"
@@ -86,7 +81,7 @@
 		},
 		{
 			"Name": "SteamBridge",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/462c7e0a29ea4282a162b0c34477ebf9"
 		},
 		{
@@ -183,6 +178,16 @@
 		{
 			"Name": "OnlineSubsystemTwitch",
 			"Enabled": true
+		},
+		{
+			"Name": "AsyncLoadingScreen",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/01f39767dc6b4290877f38365787cbf8"
+		},
+		{
+			"Name": "GrenadeSystemPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2c9ee370a4f345e096926bea724ad424"
 		}
 	],
 	"TargetPlatforms": [

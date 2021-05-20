@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #pragma once
 
@@ -200,7 +200,7 @@ public:
 	 * @param FSteamID SteamIDGroup - The group to check.
 	 * @return bool - true if the call was successfully sent out to the Steam servers; otherwise, false if we're not connected to the steam servers or an invalid user or group was provided.
 	 */
-	UFUNCTION(BlueprintPure, Category = "SteamBridgeCore|GameServer")
+	UFUNCTION(BlueprintCallable, BlueprintPure = false, Category = "SteamBridgeCore|GameServer")
 	bool RequestUserGroupStatus(FSteamID SteamIDUser, FSteamID SteamIDGroup) const { return SteamGameServer()->RequestUserGroupStatus(SteamIDUser, SteamIDGroup); }
 
 	/**

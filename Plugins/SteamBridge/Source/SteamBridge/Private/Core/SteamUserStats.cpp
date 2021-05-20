@@ -1,4 +1,4 @@
-// Copyright 2020 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
+// Copyright 2020-2021 Russ 'trdwll' Treadwell <trdwll.com>. All Rights Reserved.
 
 #include "Core/SteamUserStats.h"
 
@@ -46,6 +46,14 @@ FSteamAPICall USteamUserStats::FindOrCreateLeaderboard(const FString& Leaderboar
 	return SteamUserStats()->FindOrCreateLeaderboard(TCHAR_TO_UTF8(*LeaderboardName), (ELeaderboardSortMethod)LeaderboardSortMethod, (ELeaderboardDisplayType)LeaderboardDisplayType);
 }
 
+bool USteamUserStats::GetAchievementAndUnlockTime(const FString& Name, bool& bAchieved, FDateTime& UnlockTime) const
+{
+	uint32 TmpTime;
+	bool bResult = SteamUserStats()->GetAchievementAndUnlockTime(TCHAR_TO_UTF8(*Name), &bAchieved, &TmpTime);
+	UnlockTime = FDateTime::FromUnixTimestamp(TmpTime);
+	return bResult;
+}
+
 bool USteamUserStats::GetDownloadedLeaderboardEntry(FSteamLeaderboardEntries SteamLeaderboardEntries, int32 index, FSteamLeaderboardEntry& LeaderboardEntry, TArray<int32>& Details, int32 DetailsMax) const
 {
 	Details.SetNum(DetailsMax);
@@ -59,9 +67,9 @@ int32 USteamUserStats::GetGlobalStatHistoryFloat(const FString& StatName, TArray
 {
 	TArray<double> TmpData;
 	int32 result = SteamUserStats()->GetGlobalStatHistory(TCHAR_TO_UTF8(*StatName), TmpData.GetData(), Size);
-	for (int32 i = 0; i < TmpData.Num(); i++)
+	for (const auto& LData : TmpData)
 	{
-		Data.Add((float)TmpData[i]);
+		Data.Add((float)LData);
 	}
 	return result;
 }
@@ -80,6 +88,14 @@ int32 USteamUserStats::GetNextMostAchievedAchievementInfo(int32 IteratorPrevious
 	int32 result = SteamUserStats()->GetNextMostAchievedAchievementInfo(IteratorPrevious, TmpName.GetData(), 1024, &Percent, &bAchieved);
 	Name = UTF8_TO_TCHAR(TmpName.GetData());
 	return  result;
+}
+
+bool USteamUserStats::GetUserAchievementAndUnlockTime(FSteamID SteamIDUser, const FString& Name, bool& bAchieved, FDateTime& UnlockTime) const
+{
+	uint32 TmpTime;
+	bool bResult = SteamUserStats()->GetUserAchievementAndUnlockTime(SteamIDUser, TCHAR_TO_UTF8(*Name), &bAchieved, &TmpTime);
+	UnlockTime = FDateTime::FromUnixTimestamp(TmpTime);
+	return bResult;
 }
 
 FSteamAPICall USteamUserStats::UploadLeaderboardScore(FSteamLeaderboard SteamLeaderboard, ESteamLeaderboardUploadScoreMethod LeaderboardUploadScoreMethod, int32 Score, const TArray<int32>& ScoreDetails) const
