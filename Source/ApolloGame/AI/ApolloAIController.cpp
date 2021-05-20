@@ -13,7 +13,7 @@ AApolloAIController::AApolloAIController()
 
 ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Other) const
 {
-	UAIPerceptionSystem::GetCurrent(GetWorld())->UpdateListener(*PerceptionComponent);
+	
 	if (const APawn* OtherPawn = Cast<APawn>(&Other)) {
 
 		if (const IGenericTeamAgentInterface* TeamAgent = Cast<IGenericTeamAgentInterface>(OtherPawn->GetController()))
@@ -38,5 +38,11 @@ ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Ot
 	}
 
 	return ETeamAttitude::Neutral;
+}
+
+void AApolloAIController::BeginPlay()
+{
+	Super::BeginPlay();
+	UAIPerceptionSystem::GetCurrent(GetWorld())->UpdateListener(*PerceptionComponent);
 }
 

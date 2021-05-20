@@ -29,6 +29,9 @@ public:
 		static float GetSightRange(AAIController* Controller);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "AI|Perception")
+		static float GetLoseSightRadius(AAIController* Controller);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "AI|Perception")
 		static float GetHearingRange(AAIController* Controller);
 	
 };

@@ -101,6 +101,24 @@ float UApolloAIBlueprintLibrary::GetSightRange(AAIController* Controller)
 	return 0.0f;
 }
 
+float UApolloAIBlueprintLibrary::GetLoseSightRadius(AAIController* Controller)
+{
+	UAISenseConfig* Config = GetPerceptionSenseConfig(Controller, UAISense_Sight::StaticClass());
+	if (Config == nullptr)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Unable to get Sight Config!"));
+		return 0.0f;
+	}
+	else
+	{
+		UAISenseConfig_Sight* ConfigSight = Cast<UAISenseConfig_Sight>(Config);
+		UE_LOG(LogTemp, Warning, TEXT("Got Sight Range of %f"), ConfigSight->LoseSightRadius);
+		return ConfigSight->SightRadius;
+
+	}
+	return 0.0f;
+}
+
 float UApolloAIBlueprintLibrary::GetHearingRange(AAIController* Controller)
 {
 	UAISenseConfig* Config = GetPerceptionSenseConfig(Controller, UAISense_Hearing::StaticClass());
