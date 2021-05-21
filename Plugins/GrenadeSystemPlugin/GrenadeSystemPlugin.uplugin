@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 5,
+	"VersionName": "1.1.1",
+	"FriendlyName": "GrenadeSystemPlugin",
+	"Description": "A modular grenade system.",
+	"Category": "",
+	"CreatedBy": "TRDWLL and Deadcat",
+	"CreatedByURL": "https://trdwll.com",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2c9ee370a4f345e096926bea724ad424",
+	"SupportURL": "marketplace-support@trdwll.com",
+	"EngineVersion": "4.26.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "GrenadeSystemPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32"
+			]
+		}
+	]
+}
