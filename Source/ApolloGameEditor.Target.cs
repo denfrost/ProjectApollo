@@ -9,7 +9,7 @@ public class ApolloGameEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		bUsesSteam = true;
+		//bUsesSteam = true;
 		ExtraModuleNames.AddRange( new string[] { "ApolloGame" } );
 	}
 }

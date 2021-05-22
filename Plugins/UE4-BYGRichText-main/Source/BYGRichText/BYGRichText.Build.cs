@@ -33,8 +33,7 @@ public class BYGRichText : ModuleRules
 				"Engine",
 				"Slate",
 				"SlateCore",
-				"UMG",
-				"UnrealEd",
+				"UMG"
 			}
 			);
 		

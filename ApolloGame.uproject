@@ -188,6 +188,14 @@
 			"Name": "GrenadeSystemPlugin",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/2c9ee370a4f345e096926bea724ad424"
+		},
+		{
+			"Name": "BYGRichText",
+			"Enabled": false
+		},
+		{
+			"Name": "GPULightmass",
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [

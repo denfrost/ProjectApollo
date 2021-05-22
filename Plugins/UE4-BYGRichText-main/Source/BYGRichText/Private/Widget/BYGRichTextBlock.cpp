@@ -142,10 +142,10 @@ void UBYGRichTextBlock::SetText( const FText& InText )
 void UBYGRichTextBlock::SetText_BP(FText InText)
 {
 	Text = InText;
-	if(MyRichTextBlocks.IsValid())
+	/*if(MyRichTextBlocks.IsValid())
 	{
 
-	}
+	}*/
 	RebuildWidget();
 }
 

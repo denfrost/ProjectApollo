@@ -12,7 +12,7 @@ public class ApolloGame : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "Engine", "InputCore", "AIModule", "GameplayTasks", "UMG", "RHI", "RenderCore", "CoreUObject" });
 
 		PublicDependencyModuleNames.AddRange(new string[] { "UINavigation", "AsyncLoadingScreen" });
-		PrivateDependencyModuleNames.AddRange(new string[] { "BYGRichText" });
+		//PrivateDependencyModuleNames.AddRange(new string[] { "BYGRichText" });
 
 		// Uncomment if you are using Slate UI
 		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
