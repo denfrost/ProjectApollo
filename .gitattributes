@@ -11,4 +11,4 @@ Content/ChameleonDemo/** filter=lfs diff=lfs merge=lfs -text
 Content/Chameleon/** filter=lfs diff=lfs merge=lfs -text
 Content/ScienceLab/** filter=lfs diff=lfs merge=lfs -text
 Content/Polar/** filter=lfs diff=lfs merge=lfs -text
-Content/MS_SnowEss/** filter=lfs diff=lfs merge=lfs -text
+Content/CheekyFPS/Blueprints/** filter=lfs diff=lfs merge=lfs -text
