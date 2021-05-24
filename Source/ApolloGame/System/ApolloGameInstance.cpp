@@ -200,10 +200,10 @@ void UApolloGameInstance::InitializeManualSaveArray()
 	ManualSaveSlotsList.Add("SaveSlotG");
 	ManualSaveSlotsList.Add("SaveSlotH");
 
-	MissionSaveSlotsList.Add("SaveSlotA");
-	MissionSaveSlotsList.Add("SaveSlotB");
-	MissionSaveSlotsList.Add("SaveSlotC");
-	MissionSaveSlotsList.Add("SaveSlotD");
+	MissionSaveSlotsList.Add("MissionSaveSlotA");
+	MissionSaveSlotsList.Add("MissionSaveSlotB");
+	MissionSaveSlotsList.Add("MissionSaveSlotC");
+	MissionSaveSlotsList.Add("MissionSaveSlotD");
 	
 
 
