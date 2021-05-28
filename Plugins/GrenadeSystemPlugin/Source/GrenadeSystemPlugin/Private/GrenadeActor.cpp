@@ -57,7 +57,8 @@ AGrenadeActor::AGrenadeActor()
 	m_WidgetComponent->SetDrawAtDesiredSize(true);*/
 	
 	SetReplicateMovement(true);
-	SetReplicates(true);
+	bReplicates = true;
+	bReplayRewindable = true;
 
 	m_ThrowVelocity = 2000.0f;
 	m_FuzeTime = 3.0f;

@@ -11,7 +11,7 @@
 AISSPlayerController::AISSPlayerController()
 {
 	TeamId = 18;
-	SetGenericTeamId(FGenericTeamId(TeamId));
+	//SetGenericTeamId(FGenericTeamId(TeamId));
 }
 
 class UTexture2D* AISSPlayerController::GetIconForActionByName(FName InputActionName, bool bIsGamepad)
@@ -252,3 +252,14 @@ EGamepadType AISSPlayerController::GetCurrentGamepadType()
 {
 	return CurrentGamepadType;
 }
+
+void AISSPlayerController::BeginPlay()
+{
+	Super::BeginPlay();
+	if(TeamId != 18)
+	{
+		TeamId = 18;
+	}
+	SetGenericTeamId(TeamId);
+}
+

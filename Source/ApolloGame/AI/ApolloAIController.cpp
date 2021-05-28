@@ -6,7 +6,7 @@
 
 AApolloAIController::AApolloAIController()
 {
-	SetGenericTeamId(FGenericTeamId(TeamId));
+	
 	//PerceptionComponent = CreateDefaultSubobject<UAIPerceptionComponent>("PerceptionComponent");
 	
 }
@@ -22,11 +22,13 @@ ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Ot
 			FGenericTeamId OtherTeamID = TeamAgent->GetGenericTeamId();
 			if (OtherTeamID == 5)
 			{
+			UE_LOG(LogTemp, Verbose, TEXT("Detected Friendly Actor"));
 				return ETeamAttitude::Friendly;
 			}
 			//Controllers with an ID of 18 are Hostile - the player
 			if (OtherTeamID == 18)
 			{
+				UE_LOG(LogTemp, Verbose, TEXT("Detected Enemy Actor"));
 				return ETeamAttitude::Hostile;
 			}
 			//Controllers with an ID of 10 are Neutral
@@ -43,6 +45,7 @@ ETeamAttitude::Type AApolloAIController::GetTeamAttitudeTowards(const AActor& Ot
 void AApolloAIController::BeginPlay()
 {
 	Super::BeginPlay();
-	UAIPerceptionSystem::GetCurrent(GetWorld())->UpdateListener(*PerceptionComponent);
+	SetGenericTeamId(FGenericTeamId(TeamId));
+	//UAIPerceptionSystem::GetCurrent(GetWorld())->UpdateListener(*PerceptionComponent);
 }
 

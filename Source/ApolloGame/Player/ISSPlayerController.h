@@ -12,6 +12,7 @@
  *
  */
 
+enum class EGamepadType : uint8;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnGamepadDataUpdate);
 UCLASS()
 class APOLLOGAME_API AISSPlayerController : public APlayerController, public IGenericTeamAgentInterface
@@ -33,7 +34,7 @@ public:
 
 	// Implement The Generic Team Interface 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Perception")
-		FGenericTeamId TeamId;
+		FGenericTeamId TeamId = 18;
 
 
 	UFUNCTION(BlueprintCallable,Category = Interface)
@@ -124,4 +125,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere,BlueprintReadOnly)
 	EGamepadType CurrentGamepadType;
+
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+	
+
 };
