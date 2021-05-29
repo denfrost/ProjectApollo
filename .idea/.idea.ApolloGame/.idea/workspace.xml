@@ -5,45 +5,813 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7d82b92-cf2e-46fd-8cf8-0ee50b30f2d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/Data/PhysicalMaterials/PM_Ice.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/NPCs/ODSMannequin/FemaleMannequin/Animations/Rifle/AM_W2_Stand_Fire_Single_IPC.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApolloGame.dir/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ApolloGame.dir/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/Projectiles/BP_GrenadeActor_Ragdoll.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_17.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Blueprints/Spawn_Particle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoDisplay.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoDisplay_Enum.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoRoom.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoRoom_Enum.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/DefaultTextMaterialTranslucentUnlit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoRoomTiles.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoRoomTiles_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_Inst_Mirrored.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_NoText.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_BaseFloor_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_NamePlate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_MattPlastic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_Glass_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_LightTube.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_LightTube_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_BaseRoom.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base_FlatWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoDivider_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoDivider_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomBackWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomBackWall2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomClamp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomClamp2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomL.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomLTrim.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrim.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrim2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrimAdd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU_Hole.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_NamePlate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_URoom_Wall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_URoom_Wall2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_Pattern_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_RoomTiles_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_RoomTiles_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_UnrealEngineDecal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Maps/Overview_Map_Day.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Maps/Overview_Map_Day_BuiltData.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Acid.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Basic_Shape.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Blood_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Blood_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Bubble_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Bubble_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Bubble_Pop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Butterfly.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Dandelion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Derbis.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Dirt_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Dirt_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Distortion_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Distortion_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Dust.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Explosion_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Feather_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Feather_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fire_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fire_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fire_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fire_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fire_Splat.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Fish_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flare_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flare_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flare_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flare_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flare_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flies_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Flies_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_3_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Glow_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Grass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Heat_Distortion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Impact_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Impact_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Impact_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Lava.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Leaves_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Leaves_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Lightning.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Lightning_small.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Mud.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Muzzle_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Muzzle_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Paper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Rain.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Ribbon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Ribbon_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Rock_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Rock_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Slash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Puff_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Puff_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Wisp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Snow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Spark_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Spark_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Spark_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Splat_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Splat_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Test.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Test_AlVelRandom.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Splat_Blood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_VAT_Splat_Blood_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_WaterDrop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_WaterDrop_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_WaterDrop_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Water_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Water_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Water_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Water_Splat.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Materials/M_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Ref_Sphere.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_10.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/M_FPGun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/M_FPGun_Particle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_Screen.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_SoftMetal_UE4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Aluminum01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Aluminum01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/SM_Weapon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/T_FPGun_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/T_FPGun_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Gore.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Splat_2D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Splat_3D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Splat_Cone.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Building_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Building_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Ceramic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Concrete.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Electric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Destruction/NS_Destruction_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Butterfly.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Dandelion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Dust.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Falling_Dust.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Falling_Dust_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Fish_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Fish_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Fog.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Insects.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Insects_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Leaves.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Leaves_Vortex.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Lightning.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Lightning1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Rain_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Rain_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Snow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Snow_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Tornado.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_C4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Color_Smoke.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Confetti.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_FlashBang.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Grenade.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Molotov.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Rocket.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Sand.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Side.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Small.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Smoke.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_AmmoBox.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Big_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Big_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Burst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Dripping.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Flamethrower.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Floor.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Jet.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Small_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Small_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Small_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Fire/NS_Fire_Wall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Flare/NS_Flare_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Flare/NS_Flare_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Flare/NS_Flare_03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Flare/NS_Flare_04.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Flare/NS_Flare_05.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Acid.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Asphalt.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Blood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Brick.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Ceramic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Concrete.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Default.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Electric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Fabric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Grass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Ice.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Leather.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Metal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Mud.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Paper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Plastic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Rock.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Rubber.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Sand.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Snow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Vegetation.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Water.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/LOD_NiagaraEffectType.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Shoot/NS_Shoot_Grad_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Shoot/NS_Shoot_Grad_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_04.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_05.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_06.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_07.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_08.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_09.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_10.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_11.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_12.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_04.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_05.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_02.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_03.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_04.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_05.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_06.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_07.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_08.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_09.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_10.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_11.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_12.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_13.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_14.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_15.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_16.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_17.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_18.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_19.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_20.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Test/NS_StaticMeshDisslv.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Test/NS_Test_Alignement_Velocity_Random.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Test/NS_Test_CollisionRotation.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Acid.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Bubbles_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Bubbles_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Dripping_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Dripping_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Explosion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Lava.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Leak_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Leak_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Leak_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_Splash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_WaterFall_Big.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Niagara/Water/NS_Water_WaterFall_Small.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Aura_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Blood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Bubble.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Bubblepop.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Butterfly.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Cloud_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Cloud_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Cloud_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Dandelion.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Dirt_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Dirt_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Dirt_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Droplets_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Droplets_1_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Dust.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_1_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_1_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_2_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_2_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_3_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_3_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_4_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_4_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Explosion_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Explosion_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fire_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fireflies_Emms.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fish.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Fish_NM.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flare_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Flies.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Glow_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Glow_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Glow_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Grass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Impact.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Impact_Flare.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Lava.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Leaves.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Leaves_spsrsht.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Lightning_A.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Lightning_B.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Mesh.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Muzzleflash_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Muzzleflash_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_NoiseNormal_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_NoiseNormal_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Objects_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Objects_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Paper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Rock.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Rocks.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Rocks_NM.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Ground.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Puff_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Puff_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Puff_normal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Wisp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Spark_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Spark_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Splash_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Splash_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Splat_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Splat_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Splat_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Steam.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_VAT_Splat_Pos.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Water_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Water_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Water_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Water_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Textures/T_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Vectorfields/VectorField_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Vectorfields/VectorField_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Vectorfields/VectorField_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Realistic_Starter_VFX_Pack_Niagara/Vectorfields/VectorField_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Blueprints/Spawn_Particle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoDisplay.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoDisplay_Enum.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoRoom.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/BluePrint/BP_DemoRoom_Enum.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/DefaultTextMaterialTranslucentUnlit.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoRoomTiles.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoRoomTiles_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_Inst_Mirrored.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWallPattern_NoText.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_BaseFloor_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_Inst_NamePlate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_DemoWall_MattPlastic.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_Glass_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_LightTube.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Materials/M_LightTube_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_BaseRoom.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_Base_FlatWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoDivider_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoDivider_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomBackWall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomBackWall2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomClamp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomClamp2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomL.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomLTrim.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrim.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrim2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomTrimAdd.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_DemoRoomU_Hole.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_NamePlate.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_URoom_Wall.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Meshes/SM_URoom_Wall2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_Pattern_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_RoomTiles_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_RoomTiles_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Demo_Room/Textures/T_UnrealEngineDecal.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Maps/Overview_Map_Day.umap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Maps/Overview_Map_Day_BuiltData.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Aura_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Basic_Shape.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Blackhole_Inner.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Blackhole_Outer.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Blood_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Blood_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Derbis.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Derbis_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Dirt_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Dirt_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Dirt_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Distortion_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Distortion_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_1_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_2_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_5_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_6_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Explosion_7_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Fire_Shcokwave.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Fire_Splat.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Fire_Splat_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Flare_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Flare_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glow_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glow_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glow_3_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glow_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glow_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glows_Background.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Glowsss.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Hologram.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Impact_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Impact_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Impact_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_LightShaft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Lightning.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Lightning_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Lightning_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Lightning_small.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_10.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_11.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_12.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_13.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mesh_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Mud.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Muzzle_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Paper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Primitives.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Rain.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Ribbon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Ribbon_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Rock_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Slash.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Burst_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Burst_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Burst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Ground_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Puff_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Smoke_Wisp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Snow.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Spark_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Spark_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Spark_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Splat_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Splat_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Mesh_Blood_Inst_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Splat_Blood_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_VAT_Splat_Blood_Inst.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Materials/M_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/Character/Materials/M_UE4Man_Body.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/Character/Materials/M_UE4Man_Body_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/Character/Materials/M_UE4Man_ChestLogo.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/Character/Textures/T_UE4Man_Logo_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/Character/Textures/T_UE4_Mannequin__normals.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Mannequin/SM_Mannequin.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Cylinder.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Derbis_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Sphere.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Sphere_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_10.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_8.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/SM_Splash_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/M_FPGun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/M_FPGun_Particle.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_GlossyBlack_Latex_UE4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_Plastic_Shiny_Beige.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_Screen.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/ML_SoftMetal_UE4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Aluminum01.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Aluminum01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Rubber_Blue_01_D.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/MaterialLayers/T_ML_Rubber_Blue_01_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/SM_Weapon.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/T_FPGun_M.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Mesh/Weapon_Dummy/T_FPGun_N.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Mesh_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Splat_2D_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Blood/NS_Blood_Splat_3D_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Falling_Dust_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Fog_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Gate_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Gate_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Gate_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Hologram_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Hologram_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Lightning_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Primitive_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Primitive_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Primitive_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Environment/NS_Environment_Tornado_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Big_7.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_BlackHole.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_C4_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_EMP.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Electric.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Grenade_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Rocket_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Sand_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Explosion/NS_Explosion_Small_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Blood_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Default_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Electric_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Glass_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Laser_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Laser_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Mesh_Bounce.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Metal_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Plastic_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Rock_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Sand_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Impact/NS_Impact_Wood_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/LOD_NiagaraEffectType.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Laser/NS_Laser_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Laser/NS_Laser_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Laser/NS_Laser_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Laser/NS_Laser_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/MuzzleFlash/NS_MuzzleFlash_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Portal/NS_Portal_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Portal/NS_Portal_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Portal/NS_Portal_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Portal/NS_Portal_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Portal/NS_Portal_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shield/NS_Shield_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shoot/NS_Shoot_Grad_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shoot/NS_Shoot_Grad_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Shoot/NS_Shoot_Grad_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_13.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_14.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_15.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_16.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_17.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Smoke_18.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_06.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_07.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_08.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Smoke_and_Steam/NS_Steam_09.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_21.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_22.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_23.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_24.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_25.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_26.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_27.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_28.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_29.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Niagara/Sparks/NS_Sparks_30.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Aura_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Blood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Cloud_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Cloud_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Cloud_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Dirt_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Dirt_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Dirt_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_1_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_1_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_2_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_2_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_4_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_4_packed.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Epxlosion_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Explosion_9.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Fire_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Fire_Mesh.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Fire_Shockwave.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Flare_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Flare_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Flare_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Flare_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Glass.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Glow_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Glow_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Hex.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Impact.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Impact_Flare.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lava.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_LightShaft.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_A.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Lightning_B.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Mesh_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Mesh_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Mesh_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Mesh_5.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Mesh_6.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Muzzleflash_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_NoiseNormal_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_NoiseNormal_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Paper.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Primitives.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Random_23.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Random_44.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Random_48.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Random_59.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Random_64.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Rocks.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Rocks_NM.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Burst_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Burst_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Burst_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Ground.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Puff_color.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Smoke_Wisp.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Spark_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Spark_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Splash_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Splat_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Splat_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Steam.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_2.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_3.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_VAT_Mesh_Pos_4.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_VAT_Splat_Pos.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Water_1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Sci-Fi_Starter_VFX_Pack_Niagara/Textures/T_Wood.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/ABP_White_Pistol.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/Anims/AS_Idle_Pistol.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/Anims/Fire_Pistol_W1.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/Anims/Fire_Pistol_W1_Montage.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ApolloGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ApolloGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultGame.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultGame.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Enforcer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Enforcer.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Grunt.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Grunt.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Sniper.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/AIControllers/BP_AIController_Sniper.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/EQC_PartnerContext.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/EQC_PartnerContext.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/EQS_FindPlayer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/EQS_FindPlayer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/MainBTs/BT_SniperEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/MainBTs/BT_SniperEnemy.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/MainBTs/BT_SoldierEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/MainBTs/BT_SoldierEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_AttackEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_AttackEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_FindCover.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_FindCover.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/EQS/EQ_SearchPlayerLocation.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/EQS/EQ_SearchPlayerLocation.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_AttemptReload.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_AttemptReload.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_SniperAttack.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/AI/BehaviorTrees/SubBTs/BT_SniperAttack.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/BP_CheekyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/BP_CheekyCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/CameraManager/CamModifiers/BP_CamModifier_Headbob.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/CameraManager/CamModifiers/BP_CamModifier_Headbob.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Components/BP_WeaponComponent.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Components/BP_WeaponComponent.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_BaseEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_BaseEnemy.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Footsteps/BP_CheekyFootstepComponent.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Footsteps/BP_CheekyFootstepComponent.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Game/BP_BPFL_ApolloGameFunctions.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Game/BP_BPFL_ApolloGameFunctions.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Interfaces/BPI_Player.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Interfaces/BPI_Player.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_Apollo_PlayerController_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_Apollo_PlayerController_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_Apollo_PlayerController_Gameplay.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_Apollo_PlayerController_Gameplay.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_GruntEnemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_GruntEnemy.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_GruntEnemy_Female.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Enemies/Humanoids/BP_GruntEnemy_Female.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_ISSCheekyCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Player/BP_ISSCheekyCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Data/PhysicalMaterials/PM_DeepWater.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Data/PhysicalMaterials/PM_DeepWater.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Data/PhysicalMaterials/PM_Metal.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Data/PhysicalMaterials/PM_Metal.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/Environment/InteractiveLights/Blueprints/BaseElements/Light_Base.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Environment/InteractiveLights/Blueprints/BaseElements/Light_Base.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/Environment/scifi_kitbash/materials/MI_Floor01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Environment/scifi_kitbash/materials/MI_Floor01.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/NPCs/ODSMannequin/FemaleMannequin/Animations/FemaleMannequin_AnimBP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/NPCs/ODSMannequin/FemaleMannequin/Animations/FemaleMannequin_AnimBP.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Sounds/Footsteps/FootstepMetal_Cue.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Sounds/Footsteps/FootstepMetal_Cue.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/UMG/TestBrowser.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_BaseWeapon.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_BaseWeapon.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_LaserPistol.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_LaserPistol.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Pistol.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Pistol.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Rifle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Rifle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Shotgun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_Shotgun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_SniperRifle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_SniperRifle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_StunGun.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/BP_StunGun.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/Projectiles/BP_GrenadeActor_Frag.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/Blueprints/Weapons/Projectiles/BP_GrenadeActor_Frag.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_01.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_01.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_07.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_07.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_11.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/VFX/Muzzle_Master/PARTICLE_System/NS_MuzzleFlash_11.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapDark/Weapons/Anims/Fire_Pistol_W_NoNotify.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapDark/Weapons/Anims/Fire_Pistol_W_NoNotify.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapDark/Weapons/Darkness_Pistol_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapDark/Weapons/Darkness_Pistol_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/White_Pistol_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/CheekyFPS/External/Weapons/SciFiWeapLight/Weapons/White_Pistol_Skeleton.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/AITestMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/AITestMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/PlaytestLevel.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/PlaytestLevel.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Maps/PlaytestLevel_BuiltData.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/PlaytestLevel_BuiltData.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plugins/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Private/GrenadeActor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Private/GrenadeActor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ApolloGame/AI/ApolloAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ApolloGame/AI/ApolloAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ApolloGame/Player/ISSPlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ApolloGame/Player/ISSPlayerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/ApolloGame/Player/ISSPlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/ApolloGame/Player/ISSPlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/Playtesting/Underground.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Playtesting/Underground.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RD-0001.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RD-0001.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderBlueprintExtension-0001.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderBlueprintExtension-0001.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderGameControlExtension-0001.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderGameControlExtension-0001.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0001.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLink-0001.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLoggingExtension-0001.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderLoggingExtension-0001.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RD/UE4Editor-RD-0001.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RD/UE4Editor-RD-0001.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RD/UE4Editor-RD-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RD/UE4Editor-RD-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderBlueprintExtension/UE4Editor-RiderBlueprintExtension-0001.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderBlueprintExtension/UE4Editor-RiderBlueprintExtension-0001.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderBlueprintExtension/UE4Editor-RiderBlueprintExtension-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderBlueprintExtension/UE4Editor-RiderBlueprintExtension-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderGameControlExtension/UE4Editor-RiderGameControlExtension-0001.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderGameControlExtension/UE4Editor-RiderGameControlExtension-0001.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderGameControlExtension/UE4Editor-RiderGameControlExtension-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderGameControlExtension/UE4Editor-RiderGameControlExtension-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0001.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0001.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLink/UE4Editor-RiderLink-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension-0001.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension-0001.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension-0002.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension-0002.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Public/GrenadeActor.h" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Public/GrenadeActor.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +824,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Source/ApolloGame/Player/ISSPlayerController.cpp" />
+      <option value="$PROJECT_DIR$/../../../../Program Files/Epic Games/UE_4.26/Engine/Plugins/Marketplace/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Public/GrenadeActor.h" />
+      <option value="$PROJECT_DIR$/Plugins/GrenadeSystemPlugin/Source/GrenadeSystemPlugin/Public/GrenadeActor.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1t9mZEfV3dCtjAmfF7DCgZgpC8z" />
@@ -71,6 +841,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="CppUnrealEngineOptionsId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -340,6 +1111,8 @@
       <option name="presentableId" value="Default" />
       <updated>1622189737996</updated>
       <workItem from="1622189755634" duration="651000" />
+      <workItem from="1622269274715" duration="290000" />
+      <workItem from="1622269626456" duration="754000" />
     </task>
     <servers />
   </component>
@@ -348,5 +1121,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

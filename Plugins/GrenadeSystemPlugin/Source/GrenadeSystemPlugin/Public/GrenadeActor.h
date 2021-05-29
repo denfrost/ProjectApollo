@@ -142,6 +142,7 @@ private:
 	 * @param TArray<class ACharacter*>& OutCharacters Array of characters that are in the radius
 	 * @param bool bIsLookingAt Get only the characters that are looking at the grenade actor?
 	 */
+	UFUNCTION(BlueprintCallable, Category = "S9D|Grenade Component")
 	void FetchAllCharacters(TArray<class ACharacter*>& OutCharacters, bool bIsLookingAt = false);
 
 public:
