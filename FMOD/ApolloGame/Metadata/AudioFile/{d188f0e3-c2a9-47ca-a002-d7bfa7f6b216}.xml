@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{d188f0e3-c2a9-47ca-a002-d7bfa7f6b216}">
+		<property name="assetPath">
+			<value>Enemies/Radio/Alright lets move out.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.2596145124716553</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{91b6e621-c06a-47fa-8ad3-5d318c88536a}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -213,12 +213,27 @@
 				"Mac",
 				"Linux"
 			]
+		},
+		{
+			"Name": "ProInstanceToolsPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/b30f0d82c9e84928afc19ae5db50f765"
+		},
+		{
+			"Name": "FMODStudio",
+			"Enabled": true
+		},
+		{
+			"Name": "ElectronicNodes",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/5cb2a394d0c04e73891762be4cbd7216"
 		}
 	],
 	"TargetPlatforms": [
 		"AllDesktop",
 		"LinuxNoEditor",
 		"MacNoEditor",
-		"WindowsNoEditor"
+		"WindowsNoEditor",
+		"Linux"
 	]
 }
