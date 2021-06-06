@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Components/ActorComponent.h"
 #include "ApolloBlueprintFunctionLibrary.generated.h"
 
 /**
@@ -24,5 +25,12 @@ public:
 	//Resolution may be higher or lower than the actual display
 	UFUNCTION(BlueprintPure, BlueprintCallable, Category = "System|Viewport")
 	static FVector2D GetGameViewportSize();
+
+
+	UFUNCTION(BlueprintPure, Category = "Feedback")
+	static TSoftObjectPtr<USoundBase> GetLazyLoadedSound(TSoftObjectPtr<USoundBase> InSound);
+	
+	UFUNCTION(BlueprintPure, Category = "Getters")
+	static TSoftObjectPtr<UActorComponent> GetLazyLoadedActorComponent(TSoftObjectPtr<UActorComponent> InComponent);
 	
 };

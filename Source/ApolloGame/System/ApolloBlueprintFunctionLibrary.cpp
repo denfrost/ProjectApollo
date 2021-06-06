@@ -24,3 +24,23 @@ FVector2D UApolloBlueprintFunctionLibrary::GetGameViewportSize()
 
 	return Result;
 }
+
+TSoftObjectPtr<USoundBase> UApolloBlueprintFunctionLibrary::GetLazyLoadedSound(TSoftObjectPtr<USoundBase> InSound)
+{
+	if(InSound)
+	{
+		return InSound.LoadSynchronous();
+	}
+	return nullptr;
+}
+
+TSoftObjectPtr<UActorComponent> UApolloBlueprintFunctionLibrary::GetLazyLoadedActorComponent(
+	TSoftObjectPtr<UActorComponent> InComponent)
+{
+	if(InComponent)
+	{
+		return InComponent.LoadSynchronous();
+	}
+	return nullptr;
+}
+

@@ -13,15 +13,7 @@ AApolloCharacter::AApolloCharacter()
 }
 
 
-USoundBase* AApolloCharacter::GetSound(USoundBase* InSound)
-{
-	return InSound;
-}
 
-TSoftObjectPtr<USoundBase> AApolloCharacter::GetLazyLoadedSound(TSoftObjectPtr<USoundBase> InSound)
-{
-	return InSound.LoadSynchronous();
-}
 
 // Called when the game starts or when spawned
 void AApolloCharacter::BeginPlay()
