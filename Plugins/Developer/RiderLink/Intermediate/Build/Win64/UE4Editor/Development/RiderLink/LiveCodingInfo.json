@@ -3,7 +3,6 @@
 	{
 		"Module.RiderLink.cpp.obj": [
 			"ProtocolFactory.cpp.obj",
-			"RiderLink.cpp.obj",
 			"UE4TypesMarshallers.cpp.obj",
 			"instantiations_UE4Library.cpp.obj",
 			"BlueprintFunction.Generated.cpp.obj",
@@ -32,7 +31,8 @@
 			"UnrealLogEvent.Generated.cpp.obj",
 			"instantiations_RdEditorRoot.cpp.obj",
 			"RdEditorModel.Generated.cpp.obj",
-			"RdEditorRoot.Generated.cpp.obj"
+			"RdEditorRoot.Generated.cpp.obj",
+			"RiderLink.cpp.obj"
 		]
 	}
 }

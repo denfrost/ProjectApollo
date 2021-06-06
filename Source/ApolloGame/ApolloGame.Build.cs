@@ -9,7 +9,7 @@ public class ApolloGame : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
 		
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "Engine", "InputCore", "AIModule", "GameplayTasks", "UMG", "RHI", "RenderCore", "CoreUObject" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "Engine", "InputCore", "AIModule", "GameplayTasks", "UMG", "RHI", "RenderCore", "CoreUObject", "NavigationSystem", "NavMesh" });
 
 		PublicDependencyModuleNames.AddRange(new string[] { "UINavigation", "AsyncLoadingScreen" });
 		//PrivateDependencyModuleNames.AddRange(new string[] { "BYGRichText" });
@@ -22,5 +22,6 @@ public class ApolloGame : ModuleRules
 
 		  // To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
         DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
+        PublicDefinitions.Add("DEBUG_RENDERING=!(UE_BUILD_SHIPPING || UE_BUILD_TEST) || WITH_EDITOR");
 	}
 }

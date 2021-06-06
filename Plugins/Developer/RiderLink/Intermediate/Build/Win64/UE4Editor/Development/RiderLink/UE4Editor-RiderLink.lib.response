@@ -7,6 +7,7 @@
 /IGNORE:4221
 /NODEFAULTLIB
 "C:\Users\Etern\Unreal Projects\ApolloGame\Intermediate\Build\Win64\ApolloGameEditor\Development\Core\SharedPCH.Core.RTTI.ShadowErrors.h.obj"
+"C:\Users\Etern\Unreal Projects\ApolloGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\RiderLink.cpp.obj"
 "C:\Users\Etern\Unreal Projects\ApolloGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Module.RiderLink.cpp.obj"
 "C:\Users\Etern\Unreal Projects\ApolloGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Default.rc2.res"
 /OUT:"C:\Users\Etern\Unreal Projects\ApolloGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\UE4Editor-RiderLink.lib"

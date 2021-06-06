@@ -1,6 +1,13 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# Rider for UE specific files
+Plugins/Developer/*/Binaries/*
+Plugins/Developer/*/Intermediate/*
+Plugins/Developer/*/Intermediate/Build/*
+Plugins/Developer/RiderLink/Binaries/*
+Plugins/Developer/RiderLink/Intermediate/*
+
 # Visual Studio 2015 database file
 *.VC.db
 
@@ -43,6 +50,7 @@
 *.sdf
 *.VC.db
 *.VC.opendb
+*.idea
 
 # Precompiled Assets
 SourceArt/**/*.png
