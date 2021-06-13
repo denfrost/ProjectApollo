@@ -32,5 +32,9 @@ public:
 	
 	UFUNCTION(BlueprintPure, Category = "Getters")
 	static TSoftObjectPtr<UActorComponent> GetLazyLoadedActorComponent(TSoftObjectPtr<UActorComponent> InComponent);
+
+	//Find the edge that intersects between two points at a 90 degree angle
+	UFUNCTION(BlueprintPure, Category = "Vector")
+	static FVector GetPerpendicularVector(const FVector& Vector);
 	
 };

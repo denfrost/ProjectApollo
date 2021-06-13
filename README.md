@@ -33,7 +33,10 @@ Any suggestions or requestions you can send to me on Discord: InfinityStarlight#
 
 ## Update History
 **12/27/2020** : First Commit - Weapons and Basic AI implemented
+
 **01/21/2020** : Save system inital implementation - Player's inventory, position and enemy status and other things is tracked and updated upon saving and loading to/from disk. I'm also dabbling with Raytracing GI and reflections as part of the lighting system.
+
+**06/10/2020** : Flying enemies have been created, EQS is being implemented. 3rd party/open source navmesh is being implemented as well, next is focusing on primary loop. And transitioning to using FMOD.
 
 
 ## Authors

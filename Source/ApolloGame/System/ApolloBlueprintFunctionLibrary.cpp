@@ -44,3 +44,8 @@ TSoftObjectPtr<UActorComponent> UApolloBlueprintFunctionLibrary::GetLazyLoadedAc
 	return nullptr;
 }
 
+FVector UApolloBlueprintFunctionLibrary::GetPerpendicularVector(const FVector& Vector)
+{
+	return FVector(Vector.Y, -Vector.X, Vector.Z);
+}
+

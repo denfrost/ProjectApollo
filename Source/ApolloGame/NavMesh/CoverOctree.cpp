@@ -1,4 +1,6 @@
-// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+
+//This is largely based on the Real Time Dynamic Cover System from David Nadaski - https://www.freecodecamp.org/news/real-time-dynamic-cover-system-in-unreal-engine-4-eddb554eaefb/
 
 
 #include "CoverOctree.h"
@@ -15,7 +17,7 @@ TCoverOctree::TCoverOctree(const FVector& Origin, float Radius)
 TCoverOctree::~TCoverOctree()
 {}
 
-bool TCoverOctree::AddCoverPoint(FDTOCoverData CoverData, const float DuplicateRadius)
+bool TCoverOctree::AddCoverPoint(FDTOCoverData& CoverData, const float DuplicateRadius)
 {
 	//Check if any cover points are close enough - stop if so
 	if(AnyCoverPointsWithinBounds(FBoxCenterAndExtent(CoverData.Location, FVector(DuplicateRadius))))

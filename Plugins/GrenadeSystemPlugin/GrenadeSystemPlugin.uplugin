@@ -20,7 +20,7 @@
 			"LoadingPhase": "PreDefault",
 			"WhitelistPlatforms": [
 				"Win64",
-				"Win32"
+				"Linux"
 			]
 		}
 	]

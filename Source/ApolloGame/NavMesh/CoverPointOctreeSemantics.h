@@ -1,4 +1,6 @@
-// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+
+//This is largely based on the Real Time Dynamic Cover System from David Nadaski - https://www.freecodecamp.org/news/real-time-dynamic-cover-system-in-unreal-engine-4-eddb554eaefb/
 
 #pragma once
 
@@ -13,6 +15,7 @@ struct FCoverPointOctreeSemantics
 	enum  { MinInclusiveElementsPerNode = 7 };
 	enum  { MaxNodeDepth = 12 };
 
+	// ReSharper disable once CppUE4CodingStandardNamingViolationWarning
 	typedef TInlineAllocator<MaxElementsPerLeaf> ElementAllocator;
 
 	FORCEINLINE static const FBoxSphereBounds GetBoundingBox(const FCoverPointOctreeElement& Element)

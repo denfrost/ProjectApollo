@@ -1,4 +1,5 @@
 // Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+// 
 //This is largely based on the Real Time Dynamic Cover System from David Nadaski - https://www.freecodecamp.org/news/real-time-dynamic-cover-system-in-unreal-engine-4-eddb554eaefb/
 #pragma once
 
@@ -64,8 +65,8 @@ public:
 
 	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
 
-	// UFUNCTION()
-	// void OnNavMeshGeneratedFinished(ANavigationData* NavData);
+	UFUNCTION()
+	void OnNavMeshGeneratedFinished(ANavigationData* NavData);
 
 	//Generates cover points around and inside the owner asynchronously via CoverPointGeneratorTask, which saves the results in the game mode's octree
 	UFUNCTION(BlueprintCallable, Category = "Generation")

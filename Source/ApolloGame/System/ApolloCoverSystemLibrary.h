@@ -76,12 +76,7 @@ private:
 
 	// Maps cover point locations to their ids
 	// NOT THREAD-SAFE! Use the corresponding thread-safe functions instead.
-#if ENGINE_MINOR_VERSION < 26
-	TMap<const FVector, FOctreeElementId> ElementToID;
-#else
 	TMap<const FVector, FOctreeElementId2> ElementToID;
-#endif
-
 	// Maps cover objects to their cover point locations
 	TMultiMap<TWeakObjectPtr<const AActor>, FVector> CoverObjectToID;
 
@@ -94,18 +89,14 @@ private:
 
 	// Finds the element id of the supplied vector. Thread-safe.
 	// Returns false if the id wasn't found or is no longer valid.
-#if ENGINE_MINOR_VERSION < 26
-	bool GetElementID(FOctreeElementId& OutElementID, const FVector ElementLocation) const;
-#else
 	bool GetElementID(FOctreeElementId2& OutElementID, const FVector ElementLocation) const;
-#endif
 
 	// Thread-safe Remove() from ElementToID.
 	// Returns true if any elements were removed, false if none.
 	bool RemoveIDToElementMapping(const FVector ElementLocation);
 
 	// Enlarges the supplied box to x1.5 its size
-	FBox EnlargeAABB(FBox Box);
+	static FBox EnlargeAABB(FBox Box);
 
 public:
 	// Processing should stop when this is true.
@@ -121,6 +112,7 @@ public:
 	// Singleton accessor.
 	static UApolloCoverSystemLibrary* GetInstance(UWorld* World);
 
+	
 	//Check if the game is ending
 	bool static IsShuttingDown();
 
@@ -134,12 +126,13 @@ public:
 
 	// Thread-safe wrapper for TCoverOctree::FindCoverPoints()
 	// Finds cover points that intersect the supplied box. 
-	void FindCoverPoints(TArray<FCoverPointOctreeElement>& OutCoverPoints, const FBox& QueryBox) const;
+	void FindCoverPoints_Box(TArray<FCoverPointOctreeElement>& OutCoverPoints, const FBox& QueryBox) const;
 	
 	// Thread-safe wrapper for TCoverOctree::FindCoverPoints()
 	// Finds cover points that intersect the supplied sphere.
-	void FindCoverPoints(TArray<FCoverPointOctreeElement>& OutCoverPoints, const FSphere& QuerySphere) const;
-	
+	void FindCoverPoints_Sphere(TArray<FCoverPointOctreeElement>& OutCoverPoints, const FSphere& QuerySphere) const;
+	void OptimizeOctree() const;
+
 	// Adds a set of cover points to the octree in a single, thread-safe batch.
 	void AddCoverPoints(const TArray<FDTOCoverData>& CoverPointDTOs);
 

@@ -38,14 +38,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Settings", DisplayName = "Decal Component")
 	class UDecalComponent* m_DecalComponent;
 
-	///** The area that if the character enters then an icon will show. (m_WidgetComponent) */
-	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Settings", DisplayName = "Sphere Component")
-	//class USphereComponent* m_SphereComponent;
-
-	///** The widget that shows up if the character enters the m_SphereComponent. */
-	//UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Settings", DisplayName = "Sphere Component")
-	//class UWidgetComponent* m_WidgetComponent;
-
 	/** The distance that you want to be able to throw the grenade. */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Settings", DisplayName = "Throw Velocity", meta=(ClampMin="1000", ClampMax="10000"))
 	float m_ThrowVelocity;

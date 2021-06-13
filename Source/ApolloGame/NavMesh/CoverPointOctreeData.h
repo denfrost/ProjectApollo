@@ -28,7 +28,7 @@ public:
 		: Location(), bIsForceField(false), CoverObject(), bIsTaken(false)
 	{}
 
-	FCoverPointOctreeData(FDTOCoverData CoverData)
+	FCoverPointOctreeData(FDTOCoverData& CoverData)
 		: Location(CoverData.Location), bIsForceField(CoverData.bIsForceField), CoverObject(CoverData.CoverObject), bIsTaken(false)
 	{}
 	

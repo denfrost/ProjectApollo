@@ -3,6 +3,10 @@
 
 #include "CoverGeneratorComponent.h"
 
+#include "NavigationSystem.h"
+#include "ApolloGame/AI/Tasks/ActorCoverPointGeneratorTask.h"
+#include "ApolloGame/System/ApolloCoverSystemLibrary.h"
+
 // Sets default values for this component's properties
 UCoverGeneratorComponent::UCoverGeneratorComponent()
 {
@@ -19,7 +23,17 @@ void UCoverGeneratorComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	FVector Origin;
+	FVector Extent;
+	GetOwner()->GetActorBounds(false,Origin,Extent);
+	OwnerBounds = FBoxCenterAndExtent(Origin,Extent).GetBox();
+
+	//Generate cover points NEAR begin play, if requested
+	//have to wait for the navmesh to finish generation first
+	if(bGenerateOnBeginPlay)
+	{
+		UNavigationSystemV1::GetCurrent(GetWorld())->OnNavigationGenerationFinishedDelegate.AddDynamic(this,&UCoverGeneratorComponent::OnNavMeshGeneratedFinished);
+	}
 	
 }
 
@@ -34,14 +48,54 @@ void UCoverGeneratorComponent::TickComponent(float DeltaTime, ELevelTick TickTyp
 
 void UCoverGeneratorComponent::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
+	//Remove owner's cover points from the map upon destruction
+	if(UApolloCoverSystemLibrary::IsShuttingDown())
+	{
+		return;
+	}
+	UApolloCoverSystemLibrary::GetInstance(GetWorld())->RemoveCoverPointsOfObject(GetOwner());
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
 }
 
-// void UCoverGeneratorComponent::OnNavMeshGeneratedFinished(ANavigationData* NavData)
-// {
-// 	GenerateCoverPoints();
-// }
+
+void UCoverGeneratorComponent::OnNavMeshGeneratedFinished(ANavigationData* NavData)
+{
+	GenerateCoverPoints();
+}
 
 void UCoverGeneratorComponent::GenerateCoverPoints()
 {
+#if DEBUG_RENDERING
+	if(UApolloCoverSystemLibrary::IsShuttingDown())
+	{
+		return;
+	}
+	bDebugDraw = UApolloCoverSystemLibrary::GetInstance(GetWorld())->bDebugDraw;
+#endif
+
+	//Spawn the cover generator task
+#if DEBUG_RENDERING
+	if (bDebugDraw)
+	{
+		(new FAutoDeleteAsyncTask<FActorCoverPointGeneratorTask>(
+			GetOwner(),
+			GetWorld(),
+			BoundingBoxExpansion,
+			ScanGridUnit,
+			SmallestAgentHeight,
+			bGeneratePerStaticMesh
+			))->StartSynchronousTask();
+	}
+	else
+#endif
+	(new FAutoDeleteAsyncTask<FActorCoverPointGeneratorTask>(
+		GetOwner(),
+		GetWorld(),
+		BoundingBoxExpansion,
+		ScanGridUnit,
+		SmallestAgentHeight,
+		bGeneratePerStaticMesh
+	))->StartBackgroundTask();
+	
 }
 

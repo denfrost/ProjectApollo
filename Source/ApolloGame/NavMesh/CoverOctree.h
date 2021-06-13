@@ -1,11 +1,11 @@
-// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
 
 #pragma once
+//This is largely based on the Real Time Dynamic Cover System from David Nadaski - https://www.freecodecamp.org/news/real-time-dynamic-cover-system-in-unreal-engine-4-eddb554eaefb/
 
 #include "CoreMinimal.h"
 #include "Math/GenericOctreePublic.h"
 #include "Math/GenericOctree.h"
-#include "GameFramework/Actor.h"
 #include "CoverPointOctreeElement.h"
 #include "CoverPointOctreeSemantics.h"
 
@@ -25,7 +25,7 @@ public:
 	~TCoverOctree();
 
 	//Adds a cover point entry to octree
-	bool AddCoverPoint(FDTOCoverData CoverData, const float DuplicateRadius);
+	bool AddCoverPoint(FDTOCoverData& CoverData, const float DuplicateRadius);
 
 	//Checks if any cover points are within bounds
 	//@param const FBoxCenterAndExtent - supplied bounds

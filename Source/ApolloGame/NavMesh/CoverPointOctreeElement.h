@@ -1,4 +1,4 @@
-// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
+// Copyright Infinity Starlight Studios 2021. All Rights Reserved (unless otherwise specified)
 
 #pragma once
 
@@ -14,7 +14,7 @@
 USTRUCT(BlueprintType)
 struct FCoverPointOctreeElement
 {
-	GENERATED_BODY()
+	GENERATED_USTRUCT_BODY()
 
 public:
 	TSharedRef<FCoverPointOctreeData,ESPMode::ThreadSafe> Data;
@@ -25,14 +25,14 @@ public:
 		:	Data(new FCoverPointOctreeData()), Bounds()
 	{}
 
-	FCoverPointOctreeElement(FDTOCoverData CoverData)
+	explicit FCoverPointOctreeElement(FDTOCoverData& CoverData)
 		: Data(new FCoverPointOctreeData(CoverData)), Bounds(FSphere(CoverData.Location, 1.0f))
 	{}
 
 	FORCEINLINE bool IsEmpty() const
 	{
-		const FBox boundingBox = Bounds.GetBox();
-		return boundingBox.IsValid == 0 || boundingBox.GetSize().IsNearlyZero();
+		const FBox BoundingBox = Bounds.GetBox();
+		return BoundingBox.IsValid == 0 || BoundingBox.GetSize().IsNearlyZero();
 	}
 
 	FORCEINLINE UObject* GetOwner() const
